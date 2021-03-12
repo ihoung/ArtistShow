@@ -5,6 +5,9 @@ using UnityEngine;
 public enum EUILayer
 {
     Bottom,
+    Middle,
+    Top,
+    OverAll,
 }
 
 public abstract class BaseWnd<TWndMono> where TWndMono : BaseWndMono
