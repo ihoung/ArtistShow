@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestTable : Table<SOTestTable, SOTestTableItem>
+public enum ETest
+{
+    AAA,
+    BBB,
+}
+
+public class TableTest : Table<SOTableTest, SOTableItemTest>
 {
 
 }
 
-public class SOTestTableItem : SOTableItem
+public class SOTableItemTest : SOTableItem
 {
-    public int pTest;
+    public int p1;
+    public float p2;
+    public double p3;
+    public string p4;
+    public ETest p5;
 }
 
-public class SOTestTable : SOTable<SOTestTableItem>
+public class SOTableTest : SOTable<SOTableItemTest>
 {
 
 }
