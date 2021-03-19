@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TableMgr : SingleTon<TableMgr>
 {
-    public Table<SOTableTest, SOTableItemTest> TableTest;
+    public Table<TableItemDialog, SOTableDialog, SOTableItemDialog> TableDialog;
 
     public override void Init()
     {
@@ -13,11 +13,11 @@ public class TableMgr : SingleTon<TableMgr>
 
     public override void Dispose()
     {
-
+        TableDialog = default;
     }
 
     private void LoadTable()
     {
-        TableTest = new Table<SOTableTest, SOTableItemTest>(ResUtil.LoadSO<SOTableTest>(typeof(SOTableTest).Name));
+        TableDialog = new Table<TableItemDialog, SOTableDialog, SOTableItemDialog>(ResUtil.LoadSO<SOTableDialog>(typeof(SOTableDialog).Name));
     }
 }
