@@ -8,11 +8,7 @@ public enum ETest
     BBB,
 }
 
-public class TableTest : Table<SOTableTest, SOTableItemTest>
-{
-
-}
-
+[System.Serializable]
 public class SOTableItemTest : SOTableItem
 {
     public int p1;
@@ -22,6 +18,7 @@ public class SOTableItemTest : SOTableItem
     public ETest p5;
 }
 
+[System.Serializable]
 public class SOTableTest : SOTable<SOTableItemTest>
 {
 

@@ -12,7 +12,7 @@ public interface ISOTable
 }
 
 [System.Serializable]
-public class SOTable<TSOTableItem> : ISOTable where TSOTableItem : SOTableItem
+public class SOTable<TSOTableItem> : ScriptableObject, ISOTable where TSOTableItem : SOTableItem
 {
     public TSOTableItem[] Items;
 

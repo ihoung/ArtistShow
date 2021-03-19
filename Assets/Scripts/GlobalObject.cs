@@ -13,6 +13,7 @@ public class GlobalObject : MonoBehaviour
     void Start()
     {
         UILayerMgr.Instance.Init();
+        TableMgr.Instance.Init();
     }
 
     // Update is called once per frame

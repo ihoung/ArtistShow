@@ -68,7 +68,13 @@ public class ImportExcel : EditorWindow
                                 }
                                 string tableName = reader.GetString(fieldIndex["tableName"]);
                                 string scriptObject = reader.GetString(fieldIndex["scriptObject"]);
-                                dictTable2SO.Add(tableName, ParseUtil.ParseType(scriptObject));
+                                Type soType = ParseUtil.ParseType(scriptObject);
+                                if(soType == null)
+                                {
+                                    Debug.LogError($"The scriptobject for Table {tableName} do not exist!");
+                                    return;
+                                }
+                                dictTable2SO.Add(tableName, soType);
                             }
                             catch (Exception e)
                             {
@@ -123,12 +129,26 @@ public class ImportExcel : EditorWindow
 
                             Dictionary<string, object> item = new Dictionary<string, object>();
                             bool discardItem = false;
+                            List<int> curIdList = new List<int>();
                             foreach (var field in fieldIndex)
                             {
                                 Type fieldType = reader.GetFieldType(field.Value);
                                 if (fieldType == typeof(int))
                                 {
-                                    item.Add(field.Key, reader.GetInt32(field.Value));
+                                    int _value = reader.GetInt32(field.Value);
+                                    if (field.Key == "ID")
+                                    {
+                                        if (curIdList.Contains(_value))
+                                        {
+                                            discardItem = true;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            curIdList.Add(_value);
+                                        }
+                                    }
+                                    item.Add(field.Key, _value);
                                 }
                                 else if (fieldType == typeof(float))
                                 {
@@ -160,13 +180,14 @@ public class ImportExcel : EditorWindow
                                 }
                                 else
                                 {
+                                    discardItem = true;
                                     throw new Exception($"Unsupported Data Type：{fieldType.Name}");
                                 }
+                            }
 
-                                if (!discardItem)
-                                {
-                                    itemList.Add(item);
-                                }
+                            if (!discardItem)
+                            {
+                                itemList.Add(item);
                             }
                         }
 
@@ -175,6 +196,12 @@ public class ImportExcel : EditorWindow
                             string json = JsonConvert.SerializeObject(itemList);
                             Type soType = dictTable2SO[fileName];
                             var res = CreateInstance(soType);
+                            res.name = soType.Name;
+                            if (res == null)
+                            {
+                                Debug.LogError($"Failed to create instance of scriptobject {soType}!");
+                                throw new Exception($"Failed to create instance of scriptobject {soType}!");
+                            }
                             (res as ISOTable).Json2SO(json);
                             EditorUtility.SetDirty(res);
                             AssetDatabase.CreateAsset(res, SAVE_PATH + res.name + ".asset");
@@ -184,11 +211,16 @@ public class ImportExcel : EditorWindow
             }
             catch (Exception exception)
             {
-                EditorUtility.DisplayDialog("Read Excel Failed! ", $"{xlsxFile} is occupied by other progress!!!", "OK");
+                if (string.IsNullOrEmpty(exception.Message))
+                    EditorUtility.DisplayDialog("Read Excel Failed! ", $"{xlsxFile} is occupied by other progress!!!", "OK");
+                else
+                    EditorUtility.DisplayDialog("Read Excel Failed! ", exception.Message, "OK");
+            }
+            finally
+            {
+                EditorUtility.ClearProgressBar();
             }
         }
-
-        EditorUtility.ClearProgressBar();
     }
 
     private string m_selectedPath = "";
