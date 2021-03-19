@@ -14,6 +14,8 @@ public class GlobalObject : MonoBehaviour
     {
         UILayerMgr.Instance.Init();
         TableMgr.Instance.Init();
+
+        DialogWnd.Instance.ShowDialog(1001);
     }
 
     // Update is called once per frame
