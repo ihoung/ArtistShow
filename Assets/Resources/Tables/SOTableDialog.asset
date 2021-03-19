@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3365d8eb7a87eb24f92192568895c637, type: 3}
+  m_Name: SOTableDialog
+  m_EditorClassIdentifier: 
+  Items:
+  - ID: 1001
+    name: "\u65C1\u767D"
+    dialog_content: hello
+    role_img: 
+    role_img_pos: 1
+    bg_img: 
+    next_id: 1002
+  - ID: 1002
+    name: A
+    dialog_content: how are u
+    role_img: 
+    role_img_pos: 3
+    bg_img: 
+    next_id: 1003
+  - ID: 1003
+    name: B
+    dialog_content: i am fine, and u
+    role_img: 
+    role_img_pos: 1
+    bg_img: 
+    next_id: 1004
+  - ID: 1004
+    name: A
+    dialog_content: hello
+    role_img: 
+    role_img_pos: 3
+    bg_img: 
+    next_id: 1005
+  - ID: 1005
+    name: B
+    dialog_content: how are u
+    role_img: 
+    role_img_pos: 1
+    bg_img: 
+    next_id: 1006
+  - ID: 1006
+    name: A
+    dialog_content: i am fine, and u
+    role_img: 
+    role_img_pos: 3
+    bg_img: 
+    next_id: 1007
+  - ID: 1007
+    name: B
+    dialog_content: hello
+    role_img: 
+    role_img_pos: 1
+    bg_img: 
+    next_id: 1008
+  - ID: 1008
+    name: A
+    dialog_content: how are u
+    role_img: 
+    role_img_pos: 3
+    bg_img: 
+    next_id: 1009
+  - ID: 1009
+    name: B
+    dialog_content: i am fine, and u
+    role_img: 
+    role_img_pos: 1
+    bg_img: 
+    next_id: 1010
+  - ID: 1010
+    name: A
+    dialog_content: hello
+    role_img: 
+    role_img_pos: 3
+    bg_img: 
+    next_id: 0

@@ -5,12 +5,13 @@ using UnityEngine;
 public enum EUILayer
 {
     Bottom,
+    Middle,
+    Top,
+    OverAll,
 }
 
 public abstract class BaseWnd<TWndMono> where TWndMono : BaseWndMono
 {
-    private const string wndsPath = "Prefabs/Wnd/";
-
     protected abstract string ResName { get; }
     protected abstract EUILayer Layer { get; }
 
@@ -19,15 +20,21 @@ public abstract class BaseWnd<TWndMono> where TWndMono : BaseWndMono
     protected abstract void OnHide();
     protected abstract void OnDestroy();
 
-    public TWndMono Mono;
+    protected TWndMono Mono;
     private GameObject goWnd;
 
     protected bool IsShow = false;
 
     private void Init()
     {
-        goWnd = Resources.Load<GameObject>(wndsPath + ResName);
-        Object.Instantiate(goWnd, UILayerMgr.Instance.UILayer[Layer]);
+        goWnd = Object.Instantiate(ResUtil.LoadPrefab(ResName), UILayerMgr.Instance.UILayer[Layer]);
+
+        RectTransform rectTrans = goWnd.GetComponent<RectTransform>();
+        rectTrans.anchorMin = new Vector2(0f, 0f);
+        rectTrans.anchorMax = new Vector2(1f, 1f);
+        rectTrans.offsetMin = new Vector2(0f, 0f);
+        rectTrans.offsetMax = new Vector2(0f, 0f);
+
         Mono = goWnd.transform.GetComponent<TWndMono>();
         OnInit();
     }
