@@ -12,7 +12,7 @@ public class GlobalObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UILayerMgr.Instance.Init();
+        MainUILayerMgr.Instance.Init();
         TableMgr.Instance.Init();
 
         DialogWnd.Instance.ShowDialog(1001);

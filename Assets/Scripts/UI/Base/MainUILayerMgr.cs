@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UILayerMgr : MonoSingleTon<UILayerMgr>
+public class MainUILayerMgr : MonoSingleTon<MainUILayerMgr>
 {
     public RectTransform Bottom;
     public RectTransform Middle;
