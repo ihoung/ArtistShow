@@ -11,7 +11,7 @@ public enum EUILayer
     OverAll,
 }
 
-public abstract class BaseWnd<TWndMono> where TWndMono : BaseWndMono
+public abstract class BasicWnd<TWndMono> where TWndMono : BasicWndMono
 {
     protected abstract string ResName { get; }
     protected abstract EUILayer Layer { get; }

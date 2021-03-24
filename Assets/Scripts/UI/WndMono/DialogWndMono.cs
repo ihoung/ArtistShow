@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogWndMono : BaseWndMono
+public class DialogWndMono : BasicWndMono
 {
     public Image imgBg;
 

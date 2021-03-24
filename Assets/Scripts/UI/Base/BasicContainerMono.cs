@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseWndMono : MonoBehaviour
+public class BasicContainerMono : MonoBehaviour
 {
+
 }
