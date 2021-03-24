@@ -17,6 +17,7 @@ public class StartGameWnd : BaseSingleTonWnd<StartGameWnd, StartGameWndMono>
 
     protected override void OnShow()
     {
+        Mono.btnContinue.gameObject.SetActive(ArchiveUtil.ArchiveExist());
 
     }
 
@@ -32,12 +33,12 @@ public class StartGameWnd : BaseSingleTonWnd<StartGameWnd, StartGameWndMono>
 
     private void ContinueGame()
     {
-        LoadingMgr.Instance.LoadScene(EScene.Main);
+        LoadingMgr.Instance.EnterGame(ELoadingMode.Continue);
     }
 
     private void StartNewGame()
     {
-        LoadingMgr.Instance.LoadScene(EScene.Main);
+        LoadingMgr.Instance.EnterGame(ELoadingMode.NewGame);
     }
 
     private void QuitGame()

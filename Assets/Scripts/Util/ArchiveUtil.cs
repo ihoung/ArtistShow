@@ -11,18 +11,19 @@ using System.Threading.Tasks;
 public class ArchiveUtil : MonoBehaviour
 {
     // 文本加密密钥
-    private const string PRIVATE_KEY = "";
+    private const string PRIVATE_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+    private static readonly string archiveFile = Path.Combine(Application.persistentDataPath + "0.sav");
 
-    public static void SaveArchive(string path, object data, Action onCompleted)
+    public static void SaveArchive(object data, Action onCompleted)
     {
         string json = JsonConvert.SerializeObject(data);
         string encryptStr = RijndaelEncrypt(json, PRIVATE_KEY);
-        IOHelper.WriteText(path, encryptStr, onCompleted);
+        IOHelper.WriteText(archiveFile, encryptStr, onCompleted);
     }
 
-    public static void LoadArchive(string path, Action<object> onCompleted)
+    public static void LoadArchive(Action<object> onCompleted)
     {
-        IOHelper.ReadText(path, (str) =>
+        IOHelper.ReadText(archiveFile, (str) =>
         {
             string json = RijndaelDecrypt(str, PRIVATE_KEY);
             object ret = JsonConvert.DeserializeObject(json);
@@ -80,6 +81,11 @@ public class ArchiveUtil : MonoBehaviour
         //返回解密后的明文
         byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
         return UTF8Encoding.UTF8.GetString(resultArray);
+    }
+
+    public static bool ArchiveExist()
+    {
+        return File.Exists(archiveFile);
     }
 }
 

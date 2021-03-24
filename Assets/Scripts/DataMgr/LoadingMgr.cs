@@ -1,7 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+public enum ELoadingMode
+{
+    NewGame,
+    Continue,
+}
 
 public class LoadingMgr : MonoSingleTon<LoadingMgr>
 {
@@ -18,7 +25,7 @@ public class LoadingMgr : MonoSingleTon<LoadingMgr>
     private AsyncOperation m_asycOp;
     private string m_curScene;
 
-    public void LoadScene(EScene scene)
+    private void LoadScene(EScene scene)
     {
         SceneManager.LoadScene("Loading");
 
@@ -32,19 +39,42 @@ public class LoadingMgr : MonoSingleTon<LoadingMgr>
                 break;
         }
 
-        StartCoroutine("ILoadScene");
-    }
-
-    private IEnumerator ILoadScene()
-    {
         m_asycOp = SceneManager.LoadSceneAsync(m_curScene, LoadSceneMode.Additive);
         m_asycOp.allowSceneActivation = false;
-        while (m_asycOp.progress < 1f)
+    }
+
+    public void EnterGame(ELoadingMode mode)
+    {
+        LoadScene(EScene.Main);
+
+        switch (mode)
         {
-            yield return new WaitForEndOfFrame();
+            case ELoadingMode.NewGame:
+                PlayerDataMgr.Instance.OnGameCreated += OnGameCreatedCompleted;
+                PlayerDataMgr.Instance.CreateNewArchive();
+                break;
+            case ELoadingMode.Continue:
+                PlayerDataMgr.Instance.OnGameLoaded += OnGameLoadedCompleted;
+                PlayerDataMgr.Instance.LoadGame();
+                break;
         }
+    }
+
+    private void OnGameLoadedCompleted()
+    {
+        PlayerDataMgr.Instance.OnGameLoaded -= OnGameLoadedCompleted;
+        CloseLoadingScene();
+    }
+
+    private void OnGameCreatedCompleted()
+    {
+        PlayerDataMgr.Instance.OnGameCreated -= OnGameCreatedCompleted;
+        CloseLoadingScene();
+    }
+
+    private void CloseLoadingScene()
+    {
         m_asycOp.allowSceneActivation = true;
-        yield return new WaitForEndOfFrame();
         SceneManager.UnloadSceneAsync("Loading");
     }
 }
