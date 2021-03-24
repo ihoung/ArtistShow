@@ -4,12 +4,6 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum ELoadingMode
-{
-    NewGame,
-    Continue,
-}
-
 public class LoadingMgr : MonoSingleTon<LoadingMgr>
 {
     public override void Init()
@@ -22,10 +16,9 @@ public class LoadingMgr : MonoSingleTon<LoadingMgr>
 
     }
 
-    private AsyncOperation m_asycOp;
     private string m_curScene;
 
-    private void LoadScene(EScene scene)
+    public void SwitchScene(EScene scene)
     {
         SceneManager.LoadScene("Loading");
 
@@ -39,42 +32,20 @@ public class LoadingMgr : MonoSingleTon<LoadingMgr>
                 break;
         }
 
-        m_asycOp = SceneManager.LoadSceneAsync(m_curScene, LoadSceneMode.Additive);
-        m_asycOp.allowSceneActivation = false;
+        StartCoroutine("LoadScene");       
     }
 
-    public void EnterGame(ELoadingMode mode)
+    private IEnumerator LoadScene()
     {
-        LoadScene(EScene.Main);
-
-        switch (mode)
+        var asycOp = SceneManager.LoadSceneAsync(m_curScene);
+        asycOp.allowSceneActivation = false;
+        while (asycOp.progress < 1f)
         {
-            case ELoadingMode.NewGame:
-                PlayerDataMgr.Instance.OnGameCreated += OnGameCreatedCompleted;
-                PlayerDataMgr.Instance.CreateNewArchive();
-                break;
-            case ELoadingMode.Continue:
-                PlayerDataMgr.Instance.OnGameLoaded += OnGameLoadedCompleted;
-                PlayerDataMgr.Instance.LoadGame();
-                break;
+            yield return new WaitForEndOfFrame();
         }
-    }
-
-    private void OnGameLoadedCompleted()
-    {
-        PlayerDataMgr.Instance.OnGameLoaded -= OnGameLoadedCompleted;
-        CloseLoadingScene();
-    }
-
-    private void OnGameCreatedCompleted()
-    {
-        PlayerDataMgr.Instance.OnGameCreated -= OnGameCreatedCompleted;
-        CloseLoadingScene();
-    }
-
-    private void CloseLoadingScene()
-    {
-        m_asycOp.allowSceneActivation = true;
-        SceneManager.UnloadSceneAsync("Loading");
+        asycOp.allowSceneActivation = true;
+        yield return new WaitForEndOfFrame();
+        GameRoot.Instance.EnterGame();
+        yield break;
     }
 }

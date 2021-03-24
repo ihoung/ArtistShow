@@ -33,12 +33,14 @@ public class StartGameWnd : BaseSingleTonWnd<StartGameWnd, StartGameWndMono>
 
     private void ContinueGame()
     {
-        LoadingMgr.Instance.EnterGame(ELoadingMode.Continue);
+        GameRoot.Instance.SetLoadingMode(ELoadingMode.Continue);
+        LoadingMgr.Instance.SwitchScene(EScene.Main);
     }
 
     private void StartNewGame()
     {
-        LoadingMgr.Instance.EnterGame(ELoadingMode.NewGame);
+        GameRoot.Instance.SetLoadingMode(ELoadingMode.NewGame);
+        LoadingMgr.Instance.SwitchScene(EScene.Main);
     }
 
     private void QuitGame()

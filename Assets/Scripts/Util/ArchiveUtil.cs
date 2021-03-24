@@ -114,10 +114,7 @@ public class IOHelper
 
         foreach (char c in result)
         {
-            if (char.IsLetterOrDigit(c) || char.IsWhiteSpace(c))
-            {
-                builder.Append(c);
-            }
+            builder.Append(c);
         }
         onCompleted?.Invoke(builder.ToString());
     }
