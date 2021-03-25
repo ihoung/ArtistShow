@@ -28,7 +28,7 @@ public abstract class BasicWnd<TWndMono> where TWndMono : BasicWndMono
 
     private void Init()
     {
-        goWnd = Object.Instantiate(ResUtil.LoadPrefab(ResName), UIMgr.Instance.UILayer[Layer]);
+        goWnd = Object.Instantiate(ResUtil.LoadPrefab(EPrefabType.Wnd, ResName), UIMgr.Instance.UILayer[Layer]);
 
         RectTransform rectTrans = goWnd.GetComponent<RectTransform>();
         rectTrans.anchorMin = new Vector2(0f, 0f);

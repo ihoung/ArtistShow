@@ -16,7 +16,7 @@ public static class UIUtil
         text.text = str;
     }
 
-    public static void SetSprite(this Image img, string spriteName)
+    public static void SetSprite(this Image img, ESpriteType spType, string spriteName)
     {
         if (img == null)
         {
@@ -24,7 +24,7 @@ public static class UIUtil
             return;
         }
 
-        Sprite sp = ResUtil.LoadSprite(spriteName);
+        Sprite sp = ResUtil.LoadSprite(spType, spriteName);
         if (sp != null)
             img.sprite = sp;
     }

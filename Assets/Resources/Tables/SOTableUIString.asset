@@ -22,3 +22,9 @@ MonoBehaviour:
   - ID: 1003
     key: QuitGame
     value: "\u9000\u51FA"
+  - ID: 1004
+    key: Commit
+    value: "\u63D0\u4EA4"
+  - ID: 1005
+    key: QuitMatch
+    value: "\u9000\u51FA\u6BD4\u8D5B"

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BasicContainerMono : MonoBehaviour
 {
-
+    public Transform Container;
 }

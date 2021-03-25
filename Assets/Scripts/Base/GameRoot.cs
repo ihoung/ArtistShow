@@ -29,6 +29,8 @@ public class GameRoot : MonoSingleTon<GameRoot>
 
     public void EnterGame()
     {
+        UIMgr.Instance.InitNewScene(EScene.Main);
+
         switch (m_curMode)
         {
             case ELoadingMode.NewGame:
@@ -45,10 +47,20 @@ public class GameRoot : MonoSingleTon<GameRoot>
     private void OnGameLoadedCompleted()
     {
         PlayerDataMgr.Instance.OnGameLoaded -= OnGameLoadedCompleted;
+        OnEnterGame();
+        
     }
 
     private void OnGameCreatedCompleted()
     {
         PlayerDataMgr.Instance.OnGameCreated -= OnGameCreatedCompleted;
+        OnEnterGame();
+
+        //DialogWnd.Instance.ShowDialog(1001);
+    }
+
+    private void OnEnterGame()
+    {
+        PaintingMatchWnd.Instance.ShowMatch(1);
     }
 }

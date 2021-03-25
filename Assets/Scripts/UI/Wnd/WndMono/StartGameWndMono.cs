@@ -8,4 +8,9 @@ public class StartGameWndMono : BasicWndMono
     public Button btnContinue;
     public Button btnNewGame;
     public Button btnQuit;
+
+    protected override void OnInit()
+    {
+
+    }
 }

@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicWndMono : MonoBehaviour
+public abstract class BasicWndMono : MonoBehaviour
 {
+    protected abstract void OnInit();
+
+    private void Awake()
+    {
+        OnInit();
+    }
 }

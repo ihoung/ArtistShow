@@ -52,7 +52,7 @@ public class DialogWnd : BaseSingleTonWnd<DialogWnd, DialogWndMono>
         else
         {
             Mono.imgBg.gameObject.SetActive(true);
-            Mono.imgBg.sprite = ResUtil.LoadSprite(m_curDialog.BgImg);
+            Mono.imgBg.sprite = ResUtil.LoadSprite(ESpriteType.Bg, m_curDialog.BgImg);
         }
 
         Mono.txtName.SetText(m_curDialog.Name);
@@ -64,13 +64,13 @@ public class DialogWnd : BaseSingleTonWnd<DialogWnd, DialogWndMono>
         switch (m_curDialog.RoleImgPos)
         {
             case ERoleImgPos.Left:
-                Mono.imgRoleLeft.SetSprite(m_curDialog.RoleImg);
+                Mono.imgRoleLeft.SetSprite(ESpriteType.Character, m_curDialog.RoleImg);
                 break;
             case ERoleImgPos.Middle:
-                Mono.imgRoleMiddle.SetSprite(m_curDialog.RoleImg);
+                Mono.imgRoleMiddle.SetSprite(ESpriteType.Character, m_curDialog.RoleImg);
                 break;
             case ERoleImgPos.Right:
-                Mono.imgRoleRight.SetSprite(m_curDialog.RoleImg);
+                Mono.imgRoleRight.SetSprite(ESpriteType.Character, m_curDialog.RoleImg);
                 break;
             default:
                 break;

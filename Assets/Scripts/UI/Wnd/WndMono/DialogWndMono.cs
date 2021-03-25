@@ -14,4 +14,9 @@ public class DialogWndMono : BasicWndMono
     public Image imgRoleRight;
 
     public Button btnNext;
+
+    protected override void OnInit()
+    {
+
+    }
 }
