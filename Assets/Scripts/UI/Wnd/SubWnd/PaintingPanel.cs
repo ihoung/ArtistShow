@@ -48,7 +48,14 @@ public class PaintingPanel : SubWnd<PaintingPanelMono>
 
     public List<Color> GetStandardColorList()
     {
-        List<Color> ret = new List<Color>();
-        return ret;
+        return Mono.standardColors;
+    }
+
+    public void SetAllPieceBtnEnable(bool enable)
+    {
+        foreach(var piece in pieceUnits)
+        {
+            piece.SetBtnEnable(enable);
+        }
     }
 }

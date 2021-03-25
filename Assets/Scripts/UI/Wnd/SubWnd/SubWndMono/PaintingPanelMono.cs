@@ -8,5 +8,6 @@ public class PaintingPanelMono : SubWndMono
     public GameObject goOriginal;
     public GameObject goPainting;
 
+    public List<Color> standardColors;
     public List<PaintingPieceUnitMono> paintingPieces;
 }

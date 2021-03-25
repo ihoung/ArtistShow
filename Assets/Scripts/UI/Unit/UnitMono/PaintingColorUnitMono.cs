@@ -7,4 +7,5 @@ public class PaintingColorUnitMono : BasicUnitMono
 {
     public Image imgColor;
     public Outline selectedLine;
+    public Button btnClicked;
 }

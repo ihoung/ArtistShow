@@ -61,6 +61,6 @@ public class GameRoot : MonoSingleTon<GameRoot>
 
     private void OnEnterGame()
     {
-        PaintingMatchWnd.Instance.ShowMatch(1);
+        PaintingMatchWnd.Instance.ShowMatch(3);
     }
 }

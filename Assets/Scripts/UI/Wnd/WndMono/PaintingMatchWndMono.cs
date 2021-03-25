@@ -14,6 +14,9 @@ public class PaintingMatchWndMono : BasicWndMono
 
     public CommonContainer<PaintingColorUnit, PaintingColorUnitMono> colorOptionsContainer;
 
+    public GameObject goFinalScore;
+    public Text txtScore;
+
     public Button btnCommit;
     public Button btnClose;
 

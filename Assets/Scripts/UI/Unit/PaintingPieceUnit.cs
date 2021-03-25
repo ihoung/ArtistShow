@@ -11,7 +11,7 @@ public class PaintingPieceUnit : BasicUnit<PaintingPieceUnitMono>
 
     public Action<PaintingPieceUnit> OnPieceClicked;
 
-    protected override void OnBind()
+    protected override void OnInit()
     {
         Mono.btnPiece.onClick.AddListener(OnClicked);
     }
@@ -33,7 +33,11 @@ public class PaintingPieceUnit : BasicUnit<PaintingPieceUnitMono>
 
     private void OnClicked()
     {
-        Debug.LogError(PieceIndex);
         OnPieceClicked?.Invoke(this);
+    }
+
+    public void SetBtnEnable(bool enable)
+    {
+        Mono.btnPiece.enabled = enable;
     }
 }

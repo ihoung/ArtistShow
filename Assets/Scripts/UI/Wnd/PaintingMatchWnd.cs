@@ -28,7 +28,7 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
 
         for (int i = 0; i < m_standardColors.Count; ++i)
         {
-            m_curPaintColors.Add(new Color(1f, 1f, 1f));
+            m_curPaintColors.Add(new Color(1f, 1f, 1f, 1f));
         }
 
         Mono.btnCommit.onClick.AddListener(CommitPainting);
@@ -38,6 +38,20 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
     protected override void OnShow()
     {
         Mono.btnClose.gameObject.SetActive(false);
+
+        for (int i = 0; i < m_standardColors.Count; ++i)
+        {
+            var colorUnit = Mono.colorOptionsContainer.ShowUnit();
+            colorUnit.SetData(m_standardColors[i], OnColorSelected);
+
+            if (i == 0)
+            {
+                colorUnit.SelectUnit(true);
+                m_curSelectedColorUnit = colorUnit;
+            }
+        }
+
+        Mono.goFinalScore.SetActive(false);
     }
 
     protected override void OnHide()
@@ -58,19 +72,36 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
         Show();
     }
 
+    private PaintingColorUnit m_curSelectedColorUnit;
+
+    private void OnColorSelected(PaintingColorUnit colorUnit)
+    {
+        if (m_curSelectedColorUnit == colorUnit)
+            return;
+
+        m_curSelectedColorUnit?.SelectUnit(false);
+        m_curSelectedColorUnit = colorUnit;
+        colorUnit?.SelectUnit(true);
+        m_curPainting.SelectedColor = colorUnit.Color;
+    }
+
     public void OnPieceClicked(PaintingPieceUnit pieceUnit)
     {
+        pieceUnit.SetColor(m_curPainting.SelectedColor);
         m_curPaintColors[pieceUnit.PieceIndex] = m_curPainting.SelectedColor;
     }
 
     private void CommitPainting()
     {
+        m_curPainting.SetAllPieceBtnEnable(false);
         Mono.paitingArea.DOAnchorPos(Mono.comparingArea.anchoredPosition, 1f);
 
         m_standardPainting = new PaintingPanel(paintingNamePrefix + m_curMatchID.ToString(), Mono.originalPainting.transform);
         m_standardPainting.SetStandardActive(true);
 
         float score = CaculateScore();
+        Mono.goFinalScore.SetActive(true);
+        Mono.txtScore.SetText(score.ToString("f2") + "/10.0");
 
         Mono.btnCommit.gameObject.SetActive(false);
         Mono.btnClose.gameObject.SetActive(true);
@@ -89,6 +120,6 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
             count++;
         }
 
-        return sum / count * 10f;
+        return (1 - sum / count) * 10f;
     }
 }

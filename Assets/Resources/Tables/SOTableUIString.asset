@@ -28,3 +28,6 @@ MonoBehaviour:
   - ID: 1005
     key: QuitMatch
     value: "\u9000\u51FA\u6BD4\u8D5B"
+  - ID: 1006
+    key: PaintingMatchScore
+    value: "\u6700\u7EC8\u5F97\u5206\uFF1A"
