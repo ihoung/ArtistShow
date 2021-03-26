@@ -9,6 +9,7 @@ public enum ESpriteType
     Bg,
     Character,
     UI,
+    Guessing,
 }
 
 public enum EPrefabType
@@ -47,6 +48,9 @@ public static class ResUtil
                 break;
             case ESpriteType.UI:
                 path = Path.Combine(imgPath, "UI", resName);
+                break;
+            case ESpriteType.Guessing:
+                path = Path.Combine(imgPath, "Guessing", resName);
                 break;
         }
 

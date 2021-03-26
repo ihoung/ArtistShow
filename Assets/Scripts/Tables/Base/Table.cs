@@ -34,10 +34,10 @@ public class Table<TTableItem, TSOTable, TSOTableItem> where TTableItem : TableI
 
     public TTableItem GetItem(int id)
     {
-        TableItem<TSOTableItem> ret = default;
         if (m_dictTable.ContainsKey(id))
-            ret = m_dictTable[id];
-        return m_dictTable[id];
+            return m_dictTable[id];
+
+        return null;
     }
 
     public List<TTableItem> GetItems(Func<bool> conditionFunc)

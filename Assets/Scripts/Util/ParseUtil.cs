@@ -28,4 +28,22 @@ public class ParseUtil
         }
         return ret;
     }
+
+    public static List<int> ParseIntList(string _value, char _split = '|')
+    {
+        List<int> ret = new List<int>();
+
+        if (string.IsNullOrEmpty(_value))
+            return ret;
+
+        string[] arr = _value.Split(_split);
+
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            ret.Add(int.Parse(arr[i]));
+        }
+
+        return ret;
+    }
 }

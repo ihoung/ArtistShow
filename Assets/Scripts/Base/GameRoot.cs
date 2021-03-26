@@ -55,12 +55,15 @@ public class GameRoot : MonoSingleTon<GameRoot>
     {
         PlayerDataMgr.Instance.OnGameCreated -= OnGameCreatedCompleted;
         OnEnterGame();
-
-        //DialogWnd.Instance.ShowDialog(1001);
     }
 
     private void OnEnterGame()
     {
-        PaintingMatchWnd.Instance.ShowMatch(3);
+        // 初始化Manager
+        ProgressMgr.Instance.Init();
+        EventMgr.Instance.Init();
+
+        //初始窗口
+        MainBgWnd.Instance.Show();
     }
 }

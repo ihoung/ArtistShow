@@ -32,7 +32,7 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
         }
 
         Mono.btnCommit.onClick.AddListener(CommitPainting);
-        Mono.btnClose.onClick.AddListener(Hide);
+        Mono.btnClose.onClick.AddListener(Destroy);
     }
 
     protected override void OnShow()

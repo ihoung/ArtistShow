@@ -68,7 +68,7 @@ public abstract class BasicWnd<TWndMono> where TWndMono : BasicWndMono
     {
         IsShow = false;
         Mono = null;
-        goWnd = null;
+        Object.Destroy(goWnd);
         OnDestroy();
     }
 }

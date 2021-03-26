@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7225d8d648b686346b775ca17dc4cc6c, type: 3}
+  m_Name: SOTablePeriod
+  m_EditorClassIdentifier: 
+  Items:
+  - ID: 1
+    stage: 0
+    bg_name: show_1
+    events: 1|2|3|4|5
+  - ID: 2
+    stage: 1
+    bg_name: show_1
+    events: 6|7
+  - ID: 3
+    stage: 2
+    bg_name: show_2
+    events: 8|9|10
+  - ID: 4
+    stage: 3
+    bg_name: show_2
+    events: 11|12
+  - ID: 5
+    stage: 4
+    bg_name: show_3
+    events: 13|14|15

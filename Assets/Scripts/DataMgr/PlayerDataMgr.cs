@@ -51,25 +51,24 @@ public class PlayerBasicInfo
             }
         }
     }
-}
 
-public enum EProgressStage
-{
-    Preliminary = 0,
-    Rest_1,
-    QuarterFinal,
-    Rest_2,
-    SemiFinal,
-    Rest_3,
-    Final,
+    public void DoFeedBack(TableItemFeedback data)
+    {
+        if (data.Asset != 0)
+            this[EPlayerPropType.Asset] += data.Asset;
+        if (data.Connection != 0)
+            this[EPlayerPropType.Connection] += data.Connection;
+        if (data.Strength != 0)
+            this[EPlayerPropType.Strength] += data.Strength;
+    }
 }
 
 [System.Serializable]
 public class ArchiveData
 {
-    public PlayerBasicInfo BasicInfo { get; private set; }
-    public EProgressStage CurProStage { get; private set; }
-    public int RestDayInCurStage { get; private set; }
+    public PlayerBasicInfo BasicInfo { get; private set; } = new PlayerBasicInfo();
+    public EProgressStage CurProStage { get; private set; } = EProgressStage.Preliminary;
+    public int RestDayInCurStage { get; private set; } = 0;
 }
 
 [System.Serializable]
