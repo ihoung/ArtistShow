@@ -16,20 +16,30 @@ MonoBehaviour:
   - ID: 1
     stage: 0
     bg_name: show_1
-    events: 1|2|3|4|5
+    events: 
+    dialog: 1023
   - ID: 2
     stage: 1
     bg_name: show_1
-    events: 6|7
+    events: 1|2
+    dialog: 1041
   - ID: 3
     stage: 2
     bg_name: show_2
-    events: 8|9|10
+    events: 
+    dialog: 1045
   - ID: 4
     stage: 3
     bg_name: show_2
-    events: 11|12
+    events: 3|4|5
+    dialog: 1062
   - ID: 5
     stage: 4
     bg_name: show_3
-    events: 13|14|15
+    events: 6|7|8
+    dialog: 1076
+  - ID: 0
+    stage: 0
+    bg_name: 
+    events: 
+    dialog: 0

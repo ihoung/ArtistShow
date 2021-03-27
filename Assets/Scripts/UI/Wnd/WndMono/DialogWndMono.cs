@@ -15,8 +15,11 @@ public class DialogWndMono : BasicWndMono
 
     public Button btnNext;
 
+    public CommonContainerMono optionContainerMono;
+    public CommonContainer<OptionUnit, OptionUnitMono> optionContainer;
+
     protected override void OnInit()
     {
-
+        optionContainer = new CommonContainer<OptionUnit, OptionUnitMono>(optionContainerMono);
     }
 }

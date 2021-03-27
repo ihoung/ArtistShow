@@ -40,3 +40,24 @@ MonoBehaviour:
   - ID: 1009
     key: GotoMatch
     value: "\u53BB\u6BD4\u8D5B"
+  - ID: 1010
+    key: Confirm
+    value: "\u786E\u5B9A"
+  - ID: 1011
+    key: Cancel
+    value: "\u53D6\u6D88"
+  - ID: 1012
+    key: Asset
+    value: "\u8D44\u91D1"
+  - ID: 1013
+    key: Connection
+    value: "\u4EBA\u8109"
+  - ID: 1014
+    key: Strength
+    value: "\u5B9E\u529B"
+  - ID: 1015
+    key: Back2Menu
+    value: "\u8FD4\u56DE\u83DC\u5355"
+  - ID: 1016
+    key: SaveGame
+    value: "\u4FDD\u5B58\u6E38\u620F"

@@ -137,3 +137,27 @@ MonoBehaviour:
     asset: 0
     connection: 50
     strength: 0
+  - ID: 32
+    asset: 10
+    connection: 0
+    strength: 0
+  - ID: 33
+    asset: 0
+    connection: 0
+    strength: 10
+  - ID: 34
+    asset: 0
+    connection: 10
+    strength: 0
+  - ID: 35
+    asset: 0
+    connection: 0
+    strength: 5
+  - ID: 36
+    asset: 0
+    connection: 0
+    strength: 10
+  - ID: 37
+    asset: 0
+    connection: 0
+    strength: 15

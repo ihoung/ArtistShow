@@ -42,11 +42,11 @@ public class EventMgr : SingleTon<EventMgr>
             case EEventType.Painting:
                 PaintingMatchWnd.Instance.ShowMatch(data.Param);
                 break;
-            case EEventType.Guessing:
-                OptionWnd.Instance.ShowWnd(EOptionType.Guessing, data.Param);
+            case EEventType.Dialog:
+                DialogWnd.Instance.ShowDialog(data.Param);
                 break;
             case EEventType.Quiz:
-                OptionWnd.Instance.ShowWnd(EOptionType.Quiz, data.Param);
+                OptionWnd.Instance.ShowWnd(data.Param);
                 break;
         }
 

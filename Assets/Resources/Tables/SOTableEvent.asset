@@ -14,47 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - ID: 1
-    type: 0
-    param: 1
+    type: 1
+    param: 1042
   - ID: 2
-    type: 0
-    param: 2
+    type: 1
+    param: 1044
   - ID: 3
-    type: 0
-    param: 3
+    type: 1
+    param: 1063
   - ID: 4
-    type: 0
-    param: 4
+    type: 1
+    param: 1066
   - ID: 5
-    type: 0
-    param: 5
+    type: 1
+    param: 1072
   - ID: 6
-    type: 0
-    param: 9
-  - ID: 7
-    type: 0
-    param: 10
-  - ID: 8
-    type: 1
-    param: 6
-  - ID: 9
-    type: 1
-    param: 7
-  - ID: 10
-    type: 1
-    param: 8
-  - ID: 11
-    type: 0
-    param: 11
-  - ID: 12
-    type: 0
-    param: 12
-  - ID: 13
     type: 2
     param: 1
-  - ID: 14
+  - ID: 7
     type: 2
     param: 2
-  - ID: 15
+  - ID: 8
     type: 2
     param: 3

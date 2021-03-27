@@ -11,6 +11,7 @@ public class TableMgr : SingleTon<TableMgr>
     public Table<TableItemQuiz, SOTableQuiz, SOTableItemQuiz> TableQuiz;
     public Table<TableItemAnswer, SOTableAnswer, SOTableItemAnswer> TableAnswer;
     public Table<TableItemFeedback, SOTableFeedback, SOTableItemFeedback> TableFeedback;
+    public Table<TableItemEnding, SOTableEnding, SOTableItemEnding> TableEnding;
 
     public override void Init()
     {
@@ -32,5 +33,12 @@ public class TableMgr : SingleTon<TableMgr>
         TableQuiz = new Table<TableItemQuiz, SOTableQuiz, SOTableItemQuiz>(ResUtil.LoadSO<SOTableQuiz>(typeof(SOTableQuiz).Name));
         TableAnswer = new Table<TableItemAnswer, SOTableAnswer, SOTableItemAnswer>(ResUtil.LoadSO<SOTableAnswer>(typeof(SOTableAnswer).Name));
         TableFeedback = new Table<TableItemFeedback, SOTableFeedback, SOTableItemFeedback>(ResUtil.LoadSO<SOTableFeedback>(typeof(SOTableFeedback).Name));
+        TableEnding = new Table<TableItemEnding, SOTableEnding, SOTableItemEnding>(ResUtil.LoadSO<SOTableEnding>(typeof(SOTableEnding).Name));
+    }
+
+    public static string GetUIString(string UIKey)
+    {
+        var data = Instance.TableUIString.GetFirstItem(item => item.Key == UIKey);
+        return data.Value;
     }
 }

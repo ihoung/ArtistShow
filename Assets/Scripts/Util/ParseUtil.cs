@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.Linq;
 
 public class ParseUtil
 {
@@ -45,5 +46,13 @@ public class ParseUtil
         }
 
         return ret;
+    }
+
+    public static List<string> ParseStrList(string _value, char _split = '|')
+    {
+        if (string.IsNullOrEmpty(_value))
+            return new List<string>();
+
+        return _value.Split(_split).ToList();
     }
 }

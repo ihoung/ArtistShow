@@ -8,6 +8,7 @@ public enum ERoleImgPos
     Left,
     Middle,
     Right,
+    Both,
 }
 
 [System.Serializable]
@@ -19,6 +20,7 @@ public class SOTableItemDialog : SOTableItem
     public ERoleImgPos role_img_pos;
     public string bg_img;
     public int next_id;
+    public string options;
 }
 
 [System.Serializable]

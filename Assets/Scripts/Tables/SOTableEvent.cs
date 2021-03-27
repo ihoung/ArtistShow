@@ -5,7 +5,7 @@ using UnityEngine;
 public enum EEventType
 {
     Quiz,
-    Guessing,
+    Dialog,
     Painting,
 }
 

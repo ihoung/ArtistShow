@@ -18,7 +18,8 @@ public class ConfirmWnd : BaseSingleTonWnd<ConfirmWnd, ConfirmWndMono>
 
     protected override void OnInit()
     {
-
+        Mono.btnConfirm.onClick.AddListener(OnConfirm);
+        Mono.btnCancel.onClick.AddListener(OnCancel);
     }
 
     protected override void OnShow()

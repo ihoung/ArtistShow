@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class OptionWndMono : BasicWndMono
 {
-    public Image imgObject;
     public Text txtQuestion;
     public CommonContainerMono optionsContainerMono;
 

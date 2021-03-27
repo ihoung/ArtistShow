@@ -8,14 +8,14 @@ public class OptionUnit : BasicUnit<OptionUnitMono>
     protected override string ResName => "OptionUnit";
 
     private TableItemAnswer m_data;
-    private Action m_onClicked;
+    private Action<TableItemAnswer> m_onClicked;
 
     protected override void OnInit()
     {
         Mono.btnSelect.onClick.AddListener(OnSelected);
     }
 
-    public void SetData(TableItemAnswer data, Action onClick)
+    public void SetData(TableItemAnswer data, Action<TableItemAnswer> onClick)
     {
         m_data = data;
         m_onClicked = onClick;
@@ -25,8 +25,10 @@ public class OptionUnit : BasicUnit<OptionUnitMono>
 
     private void OnSelected()
     {
-        PlayerDataMgr.Instance.CurPlayerData.BasicInfo.DoFeedBack(TableMgr.Instance.TableFeedback.GetItem(m_data.FeedbackID));
+        var feedBackData = TableMgr.Instance.TableFeedback.GetItem(m_data.FeedbackID);
+        PlayerDataMgr.Instance.CurPlayerData.BasicInfo.DoFeedBack(feedBackData);
+        ConfirmWnd.Instance.ShowWnd(PlayerBasicInfo.GetInfoStr(feedBackData), TableMgr.GetUIString("Confirm"));
 
-        m_onClicked?.Invoke();
+        m_onClicked?.Invoke(m_data);
     }
 }

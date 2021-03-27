@@ -21,12 +21,12 @@ public class ArchiveUtil : MonoBehaviour
         IOHelper.WriteText(archiveFile, encryptStr, onCompleted);
     }
 
-    public static void LoadArchive(Action<object> onCompleted)
+    public static void LoadArchive<T>(Action<T> onCompleted)
     {
         IOHelper.ReadText(archiveFile, (str) =>
         {
             string json = RijndaelDecrypt(str, PRIVATE_KEY);
-            object ret = JsonConvert.DeserializeObject(json);
+            T ret = JsonConvert.DeserializeObject<T>(json);
             onCompleted?.Invoke(ret);
         });
     }

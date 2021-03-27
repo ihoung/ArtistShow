@@ -59,11 +59,24 @@ public class GameRoot : MonoSingleTon<GameRoot>
 
     private void OnEnterGame()
     {
-        // 初始化Manager
         ProgressMgr.Instance.Init();
         EventMgr.Instance.Init();
 
         //初始窗口
-        MainBgWnd.Instance.Show();
+        DialogWnd.Instance.ShowDialog(1001, () =>
+        {
+            MainBgWnd.Instance.Show();
+        });
+    }
+
+    public void Back2Menu()
+    {
+        ProgressMgr.Instance.Dispose();
+        EventMgr.Instance.Dispose();
+
+        MainBgWnd.Instance.Destroy();
+        SettingWnd.Instance.Destroy();
+
+        LoadingMgr.Instance.SwitchScene(EScene.Start);
     }
 }

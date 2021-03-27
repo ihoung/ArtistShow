@@ -17,6 +17,8 @@ public class PlayerBasicInfo
     public int Asset { get; private set; }
     public int Strength { get; private set; }
 
+    public event Action<EPlayerPropType, int> OnPropertyChg;
+
     public int this[EPlayerPropType type]
     {
         get
@@ -55,11 +57,33 @@ public class PlayerBasicInfo
     public void DoFeedBack(TableItemFeedback data)
     {
         if (data.Asset != 0)
+        {
             this[EPlayerPropType.Asset] += data.Asset;
+            OnPropertyChg?.Invoke(EPlayerPropType.Asset, this.Asset);
+        }
         if (data.Connection != 0)
+        {
             this[EPlayerPropType.Connection] += data.Connection;
+            OnPropertyChg?.Invoke(EPlayerPropType.Connection, this.Connection);
+        }
         if (data.Strength != 0)
+        {
             this[EPlayerPropType.Strength] += data.Strength;
+            OnPropertyChg?.Invoke(EPlayerPropType.Strength, this.Strength);
+        }
+    }
+
+    public static string GetInfoStr(TableItemFeedback data)
+    {
+        List<string> infoList = new List<string>();
+        if (data.Asset != 0)
+            infoList.Add(TableMgr.GetUIString("Asset") + " " + (data.Asset > 0 ? "+" + data.Asset.ToString() : data.Asset.ToString()));
+        if (data.Connection != 0)
+            infoList.Add(TableMgr.GetUIString("Connection") + " " + (data.Connection > 0 ? "+" + data.Connection.ToString() : data.Connection.ToString()));
+        if (data.Strength != 0)
+            infoList.Add(TableMgr.GetUIString("Strength") + " " + (data.Strength > 0 ? "+" + data.Strength.ToString() : data.Strength.ToString()));
+
+        return string.Join("\n", infoList.ToArray());
     }
 }
 
@@ -67,8 +91,7 @@ public class PlayerBasicInfo
 public class ArchiveData
 {
     public PlayerBasicInfo BasicInfo { get; private set; } = new PlayerBasicInfo();
-    public EProgressStage CurProStage { get; private set; } = EProgressStage.Preliminary;
-    public int RestDayInCurStage { get; private set; } = 0;
+    public EProgressStage CurProStage { get; set; } = EProgressStage.Preliminary;
 }
 
 [System.Serializable]
@@ -97,9 +120,9 @@ public class PlayerDataMgr : SingleTon<PlayerDataMgr>
 
     public void LoadGame()
     {
-        ArchiveUtil.LoadArchive((data) =>
+        ArchiveUtil.LoadArchive<ArchiveData>((data) =>
         {
-            CurPlayerData = data as ArchiveData;
+            CurPlayerData = data;
             OnGameLoaded?.Invoke();
         });
     }

@@ -17,6 +17,7 @@ public class SOTableItemPeriod : SOTableItem
     public EProgressStage stage;
     public string bg_name;
     public string events;
+    public int dialog;
 }
 
 [System.Serializable]

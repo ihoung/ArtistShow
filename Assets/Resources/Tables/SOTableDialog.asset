@@ -14,205 +14,805 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - ID: 1001
-    name: "\u4E1A\u4F59\u8001\u677F"
-    dialog_content: 
-    role_img: boss
-    role_img_pos: 1
-    bg_img: working
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u7EC8\u4E8E\u4ECE\u7F8E\u9662\u6BD5\u4E1A\u4E86\uFF01\u8FD9\u56DB\u5E74\u4F3C\u4E4E\u5B66\u5230\u4E86\u4EC0\u4E48\uFF0C\u53C8\u4F3C\u4E4E\u4EC0\u4E48\u90FD\u6CA1\u6709\u5B66\u5230\u3002"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
     next_id: 1002
+    options: 
   - ID: 1002
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u4ECA\u5929\u662F\u6211\u4EEC\u5B66\u6821\u6BD5\u8BBE\u5C55\u7684\u6700\u540E\u4E00\u5929\uFF0C\u770B\u7740\u8EAB\u8FB9\u7684\u540C\u5B66"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 1003
+    options: 
+  - ID: 1003
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u6709\u7684\u5728\u6821\u671F\u95F4\u5C31\u5E7F\u6CDB\u53C2\u5C55\u9760\u4EBA\u8109\u7B7E\u7EA6\u4E86\u753B\u5ECA\uFF0C\u6709\u7684\u5728\u6BD5\u8BBE\u5C55\u4E0A\u88AB\u77E5\u540D\u7B56\u5C55\u4EBA\u770B\u91CD\uFF0C"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 1004
+    options: 
+  - ID: 1004
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u6709\u7684\u9760\u51FA\u683C\u7684\u793E\u4F1A\u884C\u4E3A\u5728\u7F51\u7EDC\u4E0A\u79EF\u7D2F\u4E86\u4E00\u5B9A\u4EBA\u6C14"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 1005
+    options: 
+  - ID: 1005
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u8FD8\u6709\u7684\u9760\u8DEA\u8214\u5BFC\u5E08\u83B7\u5F97\u4E86\u4FDD\u7814\u8D44\u683C\u2026\u2026\u6BCF\u4E00\u4E2A\u4EBA\u672A\u6765\u6210\u529F\u7684\u6A21\u6837\u4F3C\u4E4E\u90FD\u5DF2\u7ECF\u53EF\u4EE5\u9884\u89C1\u4E86"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 1006
+    options: 
+  - ID: 1006
+    name: "\u5E8F\u7AE0"
+    dialog_content: "\u800C\u4F60\u7684\u51FA\u8DEF\uFF0C\u53C8\u5728\u54EA\u91CC\u5462\uFF1F"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 1007
+    options: 
+  - ID: 1007
+    name: 
+    dialog_content: "\u548C\u540C\u5B66\u8FD8\u6709\u597D\u53CB\u8FDB\u884C\u4E86\u6700\u540E\u7684\u9053\u522B\uFF0C\u8FD9\u4E00\u523B\u8D77\uFF0C\u4F60\u5DF2\u7ECF\u5931\u53BB\u5B66\u751F\u8EAB\u4EFD\u7684\u4FDD\u62A4\u4E86\u3002\n\u63A5\u4E0B\u6765\u7684\u4E00\u5E74\uFF0C\u4F60\u9009\u62E9\uFF1A"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: graduate_display
+    next_id: 0
+    options: 32|33|34
+  - ID: 1008
+    name: "\u6253\u5DE5\u4EBA"
+    dialog_content: "\u5DE5\u4F5C\u4E86\u4E00\u5E74\uFF0C\u4F60\u53D1\u73B0Asshole
+      Media\u662F\u4E00\u4E2A\u7528\u7231\u53D1\u7535\u7684\u516C\u53F8\uFF0C\u8001\u677F\u53EA\u4F1A\u5439\u725B"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: working
+    next_id: 1009
+    options: 
+  - ID: 1009
+    name: "\u6253\u5DE5\u4EBA"
+    dialog_content: "\u53EA\u8981\u5E38\u5E38\u5957\u7528\u201C\u666F\u89C2\u793E\u4F1A\u201D\u548C\u201C\u5149\u7CFB\u7F8E\u5B66\u201D\u8FD9\u4E9B\u8BCD\uFF0C\u5C31\u80FD\u5F97\u5230\u8001\u677F\u7684\u8D4F\u8BC6"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: working
+    next_id: 1010
+    options: 
+  - ID: 1010
+    name: "\u6253\u5DE5\u4EBA"
+    dialog_content: "\u53CD\u6B63\u8001\u677F\u4E5F\u8BF4\u4E0D\u4E0A\u8FD9\u4E9B\u5230\u5E95\u662F\u4EC0\u4E48\u610F\u601D\u3002\u6211\u6000\u5FF5\u90A3\u4E9B\u4E13\u5FC3\u7EAF\u7CB9\u505A\u827A\u672F\u7684\u65E5\u5B50\uFF0C\u51B3\u5B9A\u79BB\u5F00\u516C\u53F8\uFF0C\u8F9E\u804C\u524D\u8001\u677F"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: working
+    next_id: 1011
+    options: 
+  - ID: 1011
+    name: "\u4E1A\u4F59\u8001\u677F"
+    dialog_content: "\u90A3\u4E2A\u8C01\uFF0C\u4F60\u7B49\u7B49\u3002"
+    role_img: leading_actor|boss
+    role_img_pos: 4
+    bg_img: working
+    next_id: 1012
+    options: 
+  - ID: 1012
     name: "\u4E1A\u4F59\u8001\u677F"
     dialog_content: "\u770B\u4F60\u5728\u8FD9\u4E2A\u57CE\u5E02\u65E0\u4F9D\u65E0\u9760\u602A\u53EF\u601C\u7684\uFF0C\u544A\u8BC9\u4F60\u4E00\u4EF6\u597D\u4E8B\u5427"
-    role_img: boss
-    role_img_pos: 1
+    role_img: leading_actor|boss
+    role_img_pos: 4
     bg_img: working
-    next_id: 1003
-  - ID: 1003
+    next_id: 1013
+    options: 
+  - ID: 1013
     name: "\u4E1A\u4F59\u8001\u677F"
     dialog_content: "\u4F60\u4E5F\u77E5\u9053\u5708R\u5427\uFF0C\u6211\u4EEC\u5373\u5C06\u53BB\u62CD\u4E00\u6863\u4ED6\u505A\u7684\u827A\u672F\u5BB6\u9009\u79C0\u7EFC\u827A\uFF0C\u4F60\u4E5F\u6765\u5427"
-    role_img: boss
-    role_img_pos: 1
+    role_img: leading_actor|boss
+    role_img_pos: 4
     bg_img: working
     next_id: 0
-  - ID: 1004
-    name: "\u91CE\u9E21\u827A\u672F\u5BB6\u7537\u53CB"
-    dialog_content: "\u6211\u7B7E\u7EA6\u7684\u753B\u5ECA\u53EB\u6211\u5373\u523B\u56DE\u56FD\u53BB\u53C2\u52A0\u4E00\u6863\u827A\u672F\u5BB6\u7EFC\u827A\uFF0C\u4F60\u4E5F\u4E00\u8D77\u6765\u5427"
-    role_img: oversea_bf
+    options: 
+  - ID: 1014
+    name: "\u7559\u5B66\u751F\u6D3B"
+    dialog_content: "3\u5E74\u7684\u7559\u5B66\u65F6\u5149\u5306\u5306\u8FC7\u53BB\uFF0C\u4F60\u7ED3\u4EA4\u5230\u4E86\u4E16\u754C\u5404\u56FD\u7684\u670B\u53CB\uFF0C"
+    role_img: leading_actor
     role_img_pos: 3
     bg_img: study_aboard
-    next_id: 1005
-  - ID: 1005
-    name: "\u91CE\u9E21\u827A\u672F\u5BB6\u7537\u53CB"
-    dialog_content: "\u4F46\u662F\uFF0C\u6211\u4EEC\u4EA4\u5F80\u7684\u4E8B\u60C5\u8981\u4FDD\u5BC6\u5662!"
-    role_img: oversea_bf
+    next_id: 1015
+    options: 
+  - ID: 1015
+    name: "\u7559\u5B66\u751F\u6D3B"
+    dialog_content: "\u4E5F\u610F\u8BC6\u5230\u4E86\u4E00\u4EF6\u4E8B\u60C5\uFF0C\u827A\u672F\u5708\u4E0D\u7BA1\u5728\u54EA\u91CC\uFF0C\u90FD\u662F\u4E00\u4E2A\u5708\uFF0C\u4F60\u6478\u6765\u6478\u53BB\u8FD8\u6CA1\u627E\u5230\u5165\u53E3\u3002"
+    role_img: leading_actor
     role_img_pos: 3
     bg_img: study_aboard
+    next_id: 1016
+    options: 
+  - ID: 1016
+    name: "\u91CE\u9E21\u827A\u672F\u5BB6\u7537\u53CB"
+    dialog_content: "\u56DE\u56FD\u524D\uFF0C\u4F60\u5728\u90A3\u8FB9\u4EA4\u7684\u7537\u670B\u53CB\u8BF4\uFF1A"
+    role_img: leading_actor|oversea_bf
+    role_img_pos: 4
+    bg_img: study_aboard
+    next_id: 1017
+    options: 
+  - ID: 1017
+    name: "\u91CE\u9E21\u827A\u672F\u5BB6\u7537\u53CB"
+    dialog_content: "\u6211\u7B7E\u7EA6\u7684\u753B\u5ECA\u53EB\u6211\u5373\u523B\u56DE\u56FD\u53BB\u53C2\u52A0\u4E00\u6863\u827A\u672F\u5BB6\u7EFC\u827A\uFF0C\u4F60\u4E5F\u4E00\u8D77\u6765\u5427\u3002"
+    role_img: leading_actor|oversea_bf
+    role_img_pos: 4
+    bg_img: study_aboard
+    next_id: 1018
+    options: 
+  - ID: 1018
+    name: "\u91CE\u9E21\u827A\u672F\u5BB6\u7537\u53CB"
+    dialog_content: "\u4F46\u662F\uFF0C\u6211\u4EEC\u4EA4\u5F80\u7684\u4E8B\u60C5\u8981\u4FDD\u5BC6\u5662\u3002"
+    role_img: leading_actor|oversea_bf
+    role_img_pos: 4
+    bg_img: study_aboard
     next_id: 0
-  - ID: 1006
-    name: "\u7239\u5473\u5F90\u5BFC\u5E08"
-    dialog_content: "\u8FD9\u662F\u6211\u4EEC\u7684\u7279\u522B\u8BFE\u7A0B\uFF0C\u827A\u672F\u5BB6\u804C\u4E1A\u57F9\u8BAD\u300A\u4E0D\u8981\u8BA9\u522B\u4EBA\u5F53\u4F60\u7238\u7238\u300B"
-    role_img: tuitor_Xu
-    role_img_pos: 1
+    options: 
+  - ID: 1019
+    name: "\u53BB\u57F9\u8BAD"
+    dialog_content: "\u4F60\u601D\u6765\u60F3\u53BB\uFF0C\u51B3\u5B9A\u5148\u53BB\u62A5\u4E2A\u73ED\uFF0C\u8DDF\u5708\u4E2D\u4EBA\u6DF7\u4E2A\u773C\u719F\u3002\u4E8E\u662F\u4F60\u6765\u5230\u4E86\u8457\u540D\u4E0A\u6D77\u6EE9\u827A\u672F\u5BB6\u5F90\u9707\u8FD9\u91CC"
+    role_img: leading_actor
+    role_img_pos: 3
     bg_img: training
-    next_id: 1007
-  - ID: 1007
+    next_id: 1020
+    options: 
+  - ID: 1020
     name: "\u7239\u5473\u5F90\u5BFC\u5E08"
-    dialog_content: "\u5C0F\u59D0\u8981\u4E0D\u8981\u4E86\u89E3\u4E00\u4E0B?"
-    role_img: tuitor_Xu
-    role_img_pos: 1
+    dialog_content: "\u8FD9\u662F\u6211\u4EEC\u7684\u7279\u522B\u8BFE\u7A0B\uFF0C\u827A\u672F\u5BB6\u804C\u4E1A\u57F9\u8BAD\u300A\u4E0D\u8981\u8BA9\u522B\u4EBA\u5F53\u4F60\u7238\u7238\u300B\uFF0C\u5C0F\u59D0\u8981\u4E0D\u8981\u4E86\u89E3\u4E00\u4E0B"
+    role_img: tuitor_Xu|leading_actor
+    role_img_pos: 4
     bg_img: training
-    next_id: 1008
-  - ID: 1008
+    next_id: 1021
+    options: 
+  - ID: 1021
     name: "\u7239\u5473\u5F90\u5BFC\u5E08"
-    dialog_content: "\u9009\u6700\u8D35\u76849888\u5957\u9910\u7684\u8BDD\uFF0C\u5C31\u6709\u5F90\u9707\u8001\u5E08\u7684\u7279\u522B\u7239\u5473\u6307\u5BFC\uFF0C\u8FD8\u80FD\u83B7\u5F97\u827A\u672F\u5BB6\u9009\u79C0\u7684\u62A5\u540D\u8D44\u683C"
-    role_img: tuitor_Xu
-    role_img_pos: 1
+    dialog_content: "\u9009\u6700\u8D35\u76849888\u5957\u9910\u7684\u8BDD\uFF0C\u5C31\u6709\u5F90\u9707\u8001\u5E08\u7684\u7279\u522B\u7239\u5473\u6307\u5BFC\uFF0C\u8FD8\u80FD\u83B7\u5F97\u827A\u672F\u5BB6\u9009\u79C0\u7684\u62A5\u540D\u8D44\u683C\u3002"
+    role_img: tuitor_Xu|leading_actor
+    role_img_pos: 4
+    bg_img: training
+    next_id: 1022
+    options: 
+  - ID: 1022
+    name: "\u7239\u5473\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F60\u54AC\u54AC\u7259\uFF0C\u4E0B\u8F7D\u4E86\u4E2A\u5C0F\u989D\u8D37\u6B3E\u8F6F\u4EF6\uFF0C\u4E70\u4E869888\u7684\u5957\u9910\u3002"
+    role_img: tuitor_Xu|leading_actor
+    role_img_pos: 4
     bg_img: training
     next_id: 0
-  - ID: 1009
-    name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
-    dialog_content: "\u4E09\u4E2A\u6708\u7684\u6BD4\u8D5B\u8FC7\u53BB\u4E86\uFF0C\u4F60\u6CA1\u80FD\u8D62\u5F97\u6BD4\u8D5B\uFF0C\u9519\u5931\u4E86\u6210\u4E3A\u4F17\u6240\u77A9\u76EE\u7684\u827A\u672F\u5BB6\u7684\u673A\u4F1A\u3002\u4E34\u8D70\u524D\uFF0C\u5BFC\u5E08\u6709\u4E9B\u8BDD\u60F3\u8DDF\u4F60\u8BF4\u2026\u2026"
+    options: 
+  - ID: 1023
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u7ADF\u7136\u83AB\u540D\u5176\u5999\u7684\u53C2\u52A0\u4E86\u9009\u79C0\uFF0C\u771F\u662F\u6709\u610F\u601D\uFF0C\u539F\u6765\u827A\u672F\u5708\u4E5F\u641E\u5A31\u4E50\u5708\u7684\u90A3\u4E00\u5957\uFF0C\u7B80\u76F4\u662F\u4E00\u573A\u5927\u578B\u7684\u884C\u4E3A\u827A\u672F\u554A\uFF0C\u827A\u672F\u5230\u5E95\u8FD8\u662F\u4E0D\u662F\u4E4C\u6258\u90A6\uFF1F\u4F60\u4E0D\u7981\u601D\u8003\u8D77\u6765"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 1024
+    options: 
+  - ID: 1024
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u4F60\u56DE\u5230\u4E86\u6BCF\u6708\u79DF\u91D1\u8981\u4E09\u5343\u5757\u7684\u5DE5\u4F5C\u5BA4\uFF0C\u5DE5\u4F5C\u5BA4\u53EF\u662F\u6210\u4E3A\u81EA\u7531\u827A\u672F\u5BB6\u7684\u6807\u914D\uFF0C\u6D3B\u7740\u5C31\u8981\u5403\u996D\uFF0C\u5C31\u8981\u7EF4\u6301\u4F53\u9762\uFF0C\u518D\u7A77\u4E5F\u8981\u79DF\u4E2A\u843D\u811A\u7684\u5730\u65B9"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 1025
+    options: 
+  - ID: 1025
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u53EF\u662F\u8FD9\u6837\u4E0B\u53BB\uFF0C\u9A6C\u4E0A\u5C31\u8981\u6263\u811A\u4E86\u5440\uFF0C\u827A\u672F\u9009\u79C0\uFF0C\u8981\u4E0D\u53BB\u8BD5\u8BD5\uFF1F"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 1026
+    options: 
+  - ID: 1026
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u4F60\u601D\u524D\u60F3\u540E\uFF0C\u51B3\u5B9A\u2026\u2026"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 1027
+    options: 
+  - ID: 1027
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u5927\u5BB6\u597D\uFF0C\u6B22\u8FCE\u6765\u5230\u827A\u672F\u5BB6\u9009\u79C0\uFF0C\u76F8\u4FE1\u5404\u4F4D\u90FD\u662F\u521A\u521A\u8FDB\u5165\u793E\u4F1A\uFF0C\u8FD8\u6CA1\u6709\u63A5\u53D7\u8FC7\u6BD2\u6253\uFF0C\u6765\u6211\u4EEC\u7684\u8282\u76EE\uFF0C\u80FD\u8BA9\u4F60\u83B7\u5F97\u771F\u6B63\u7684\u6210\u957F\uFF01"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1010
-  - ID: 1010
+    bg_img: show_1
+    next_id: 1028
+    options: 
+  - ID: 1028
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u6211\u4EEC\u7684\u53E3\u53F7\u662F\u201C\u8D8A\u52AA\u529B\uFF0C\u8D8A\u6CA1\u52B2\u201D,
+      \u6211\u662F\u4F60\u7684\u5BFC\u5E08\uFF0CPD\u5F90"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1029
+    options: 
+  - ID: 1029
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F60\u5373\u5C06\u4F5C\u4E3A\u7EC3\u4E60\u65F6\u957F\u4E00\u5E74\u534A\u7684\u4E2A\u4EBA\u827A\u672F\u751F\u53C2\u52A0\u6BD4\u8D5B"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1030
+    options: 
+  - ID: 1030
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u9996\u5148\uFF0C\u8981\u5BF9\u4F60\u4EEC\u8FDB\u884C\u5BFC\u5E08\u6D4B\u8BD5\uFF0C\u53EA\u6709\u7B54\u5BF9\u4E86\uFF0C\u624D\u80FD\u901A\u8FC7\u521D\u9009\uFF0C\u770B\u770B\u4F60\u5230\u5E95\u6709\u6CA1\u6709\u505A\u827A\u672F\u7684\u5929\u8D4B\uFF0C\u6211\u4EEC\u53EA\u7ED9\u771F\u6B63\u7684\u827A\u672F\u5BB6\u63D0\u4F9B\u673A\u4F1A"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1031
+    options: 
+  - ID: 1031
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F60\u51C6\u5907\u597D\u4E86\u5417\uFF1F\u8BF7\u542C\u7B2C\u4E00\u9898"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1032
+    options: 
+  - ID: 1032
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u5927\u5B66\u65F6\u671F\u7684\u4E13\u4E1A\u5BFC\u5E08\u4ED7\u7740\u5E74\u8F7B\u65F6\u79EF\u7D2F\u7684\u540D\u6C14\u6A2A\u884C\u5728\u5708\u5B50\u4E2D\uFF0C\u4F46\u4F60\u5E76\u4E0D\u8BA4\u540C\u4ED6\u7684\u4F5C\u54C1\uFF0C\u5BF9\u6B64\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: professor
+    next_id: 0
+    options: 1|2
+  - ID: 1033
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u6709\u4E00\u4E2A\u77E5\u540D\u5546\u4E1A\u753B\u5ECA\u613F\u610F\u548C\u4F60\u7B7E\u7EA6\uFF0C\u63D0\u9AD8\u4F60\u4F5C\u54C1\u7684\u5E02\u503C\uFF0C\u4F46\u4ED6\u4EEC\u540C\u65F6\u4F1A\u5E72\u6270\u4F60\u7684\u521B\u4F5C\uFF0C\u4F60\u613F\u610F\u7B7E\u7EA6\u5417\uFF1F"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: gallery
+    next_id: 0
+    options: 3|4
+  - ID: 1034
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F60\u88AB\u516C\u4F17\u53F7\u201C\u827A\u672F\u7684\u6284\u88AD\u201D\u6252\u51FA\u4F5C\u54C1\u6284\u88AD\u4E86\u522B\u7684\u827A\u672F\u5BB6\uFF0C\u4F60\u89C9\u5F97\u8FD9\u662F\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: plagiarism
+    next_id: 0
+    options: 5|6
+  - ID: 1035
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u6709\u4E00\u4E2A\u5FEB\u624B\u505A\u76F4\u64AD\u7684\u673A\u4F1A\uFF0C\u8981\u548C\u7F51\u7EA2\u6CD5\u514B\u513F\u4E00\u8D77\u8BB2\u89E3\u5F53\u4EE3\u827A\u672F\uFF0C\u4F60\u89C9\u5F97\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: web celebrity
+    next_id: 0
+    options: 7|8
+  - ID: 1036
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F60\u6709\u4E00\u4E2A\u611F\u60C5\u6DF1\u539A\u4EA4\u5F80\u591A\u5E74\u7684\u7537\u53CB\uFF0F\u5973\u53CB\uFF0C\u6BD5\u4E1A\u51E0\u5E74\u4E24\u4E2A\u4EBA\u90FD\u6CA1\u6709\u95EF\u51FA\u540D\u5802\uFF0C\u4F46\u73B0\u5728\u6709\u4E2A\u5E74\u8F7B\u6C14\u76DB\u7684\u201C\u827A\u4E8C\u4EE3\u201C\u8FFD\u4F60\uFF0C\u548C\u4ED6\uFF0F\u5979\u5728\u4E00\u8D77\u4F60\u5C31\u53EF\u4EE5\u80CC\u9760\u5176\u7236\u6BCD\u7684\u8D44\u6E90\uFF0C\u4F60\u4F1A\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: yierdai
+    next_id: 0
+    options: 9|10
+  - ID: 1037
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u7B54\u9898\u7ED3\u675F\uFF0C\u4E0D\u9519\u561B\uFF0C\u5E74\u8F7B\u4EBA\uFF0C\u770B\u6765\u4F60\u5BF9\u827A\u672F\u6709\u70B9\u89C9\u609F\uFF0C\u606D\u559C\u4F60\u83B7\u5F97\u4E86\u8FDB\u5165\u4E0B\u4E00\u8F6E\u7684\u8D44\u683C\u3002"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1038
+    options: 
+  - ID: 1038
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u60F3\u8981\u6210\u4E3A\u4E00\u4E2A\u6210\u529F\u7684\u827A\u672F\u5BB6\uFF0C\u5149\u6709\u8FD9\u4E9B\u662F\u4E0D\u591F\u7684\uFF0C\u8FD8\u8981\u5BF9\u827A\u672F\u5E02\u573A\u4E86\u5982\u6307\u638C"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1039
+    options: 
+  - ID: 1039
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4E0D\u8981\u518D\u95EE\u4E3A\u4EC0\u4E48\u522B\u4EBA\u7684\u827A\u672F\u54C1\u80FD\u5356\u51FA\u9AD8\u4EF7\u4E86\uFF0C\u4F60\u4E5F\u8981\u505A\u7AD9\u5728\u98CE\u53E3\u4E0A\u7684\u90A3\u53EA\u732A"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 1040
+    options: 
+  - ID: 1040
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u8FD9\u51E0\u5929\u597D\u597D\u4F11\u606F\uFF0C\u6211\u4EEC\u9A6C\u4E0A\u8981\u5F00\u59CB\u4E0B\u4E00\u8F6E\u7684\u6BD4\u8D5B\u3002"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_1
+    next_id: 0
+    options: 
+  - ID: 1041
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u54A6\uFF0C\u539F\u6765\u8FD9\u5C31\u662F\u9009\u79C0\uFF1F\u4F60\u901A\u8FC7\u4E86\u521D\u9009\uFF0C\u7ADF\u7136\u6709\u70B9\u5F00\u5FC3"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 0
+    options: 
+  - ID: 1042
+    name: 
+    dialog_content: "\u51C6\u5907\u53BB\u5F55\u8282\u76EE\u671F\u95F4\u5E26\u7684\u884C\u674E\uFF0C\u53EA\u5269\u4E0B\u4E00\u70B9\u7A7A\u95F4\u4E86\uFF0C\u4F60\u9009\u62E9\u5E26\uFF1A"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 0
+    options: 20|21|22
+  - ID: 1043
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u5728\u6BD4\u8D5B\u7684\u95F4\u9699\uFF0C\u4F60\u6253\u5F00\u4E86\u8BB8\u4E45\u4E0D\u7528\u7684\u8C46\u74E3\uFF0C\u60F3\u8981\u53BB\u6708\u4EAE\u7EC4\u627E\u627E\u7075\u611F\uFF0C\u8FD9\u65F6"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: douban
+    next_id: 1044
+    options: 
+  - ID: 1044
+    name: 
+    dialog_content: "\u6709\u4E00\u4E2A\u4EBA\u5728\u8C46\u74E3\u4E0A\u627E\u4F60\u642D\u8BDD\uFF0Cta\u597D\u50CF\u662F\u4F60\u540C\u6821\u7684\u540E\u8F88\uFF0C\u800C\u4E14\u5173\u6CE8\u4F60\u5F88\u4E45\u4E86\uFF0C\u4F60\u4F1A\uFF1A"
+    role_img: douban_junior
+    role_img_pos: 1
+    bg_img: douban
+    next_id: 0
+    options: 23|24
+  - ID: 1045
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u9A6C\u4E0A\u5C31\u8981\u6B63\u5F0F\u5F00\u59CB\u9009\u79C0\u4E86\uFF0C\u4F60\u5FC3\u4E2D\u5F88\u5FD0\u5FD1\uFF0C\u4ECA\u665A\u597D\u597D\u4F11\u606F\uFF0C\u7B2C\u4E8C\u5929\u4E00\u65E9\u5C31\u8D76\u53BB\u5F55\u5236\u4E2D\u5FC3\u2026\u2026"
+    role_img: leading_actor
+    role_img_pos: 2
+    bg_img: studio
+    next_id: 1046
+    options: 
+  - ID: 1046
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u6B22\u8FCE\u6765\u5230\u9009\u79C0\u7B2C\u4E8C\u8F6E\uFF0C\u5927\u5BB6\u8FD9\u51E0\u5929\u4F11\u606F\u7684\u53EF\u597D\uFF1F\u5E9F\u8BDD\u4E0D\u591A\u8BF4\uFF0C\u6211\u4EEC\u9A6C\u4E0A\u5F00\u59CB\u7B2C\u4E8C\u8F6E"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_2
+    next_id: 1047
+    options: 
+  - ID: 1047
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4E0B\u9762\u5C31\u8981\u8003\u5BDF\u4F60\u5BF9\u827A\u672F\u5E02\u573A\u662F\u4E0D\u662F\u6709\u5929\u8D4B\u4E86\uFF0C\u731C\u731C\u4E0B\u9762\u51E0\u4E2A\u827A\u672F\u54C1\u7684\u4EF7\u683C"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_2
+    next_id: 1048
+    options: 
+  - ID: 1048
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u770B\u770B\u4E0B\u9762\u8FD9\u5E45\u753B\uFF0C\u4F60\u89C9\u5F97\u5B83"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2_art_1
+    next_id: 0
+    options: 11|12|13
+  - ID: 1049
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u563F\u563F\uFF0C\u516C\u5E03\u7B54\u6848\uFF0C\u8FD9\u662F\u9996\u5E45AI\u7ED8\u5236\u753B\u4F5C\u300AEdmond
+      de Belamy\u300B"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1050
+    options: 
+  - ID: 1050
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "2018\u5E7410\u670829\u65E5\u5728\u7EBD\u7EA6\u4F73\u58EB\u5F97\u62CD\u5356\u884C\u4EE543.25\u4E07\u7F8E\u5143\uFF08\u7EA6300\u4E07\u4EBA\u6C11\u5E01\uFF09\u7684\u9AD8\u4EF7\u62CD\u51FA"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1051
+    options: 
+  - ID: 1051
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u8BE5\u753B\u4F5C\u7531\u5DF4\u9ECE\u827A\u672F\u7EC4\u5408\u201CObvious\u201D\u5229\u7528\u7B97\u6CD5\uFF0C\u57FA\u4E8E14\u4E16\u7EAA\u81F320\u4E16\u7EAA\u768415000\u5E45\u7ECF\u5178\u8096\u50CF\u4F5C\u54C1\u5B8C\u6210"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1052
+    options: 
+  - ID: 1052
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "AI\u8FD8\u5728\u53F3\u4E0B\u89D2\u7F72\u4E86\u81EA\u5DF1\u7684\u540D\u5B57\uFF1A\u4E00\u4E32\u6570\u5B66\u516C\u5F0F"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1053
+    options: 
+  - ID: 1053
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u522B\u6025\u522B\u6025\uFF0C\u8FD8\u6709\u673A\u4F1A\uFF0C\u4E0B\u9762\u662F\u7B2C\u4E8C\u9898"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1054
+    options: 
+  - ID: 1054
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u8FD9\u4E2A\u770B\u4E0A\u53BB\u662F\u4E0D\u662F\u5728\u751F\u6D3B\u4E2D\u5F88\u5E38\u89C1\uFF0C\u4E3A\u4EC0\u4E48\u5728\u827A\u672F\u5708\u5C31\u503C\u94B1\u4E86\u5462\uFF1F"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1055
+    options: 
+  - ID: 1055
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u5E74\u8F7B\u4EBA\u597D\u597D\u60F3\u4E00\u60F3\uFF0C\u8FD9\u5230\u5E95\u662F\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2_art_2
+    next_id: 0
+    options: 14|15|16
+  - ID: 1056
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u516C\u5E03\u7B54\u6848\uFF0C\u4E0D\u597D\u610F\u601D\u5C31\u662F\u74DC\u5B50\uFF0C\u767E\u5EA6\u4E0A\u641C\u7684"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1057
+    options: 
+  - ID: 1057
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u518D\u63A5\u518D\u5389\uFF0C\u6700\u540E\u4E00\u9898"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1058
+    options: 
+  - ID: 1058
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4F603\u5C81\u7684\u65F6\u5019\u662F\u4E0D\u662F\u4E5F\u80FD\u753B\u6210\u8FD9\u6837\uFF0C\u4F46\u662F\u4F60\u4E3A\u4EC0\u4E48\u6CA1\u51FA\u540D\u5462\uFF1F\u770B\u770B\u8FD9\u5F20"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2_art_3
+    next_id: 0
+    options: 17|18|19
+  - ID: 1059
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u6CA1\u60F3\u5230\u5427\uFF0C\u8FD9\u662F\u827A\u672F\u5BB6basquiat\u7684\u4F5C\u54C1\uFF0C\u4ED6\u5C06\u827A\u672F\u63A8\u5411\u4E86\u65E0\u8282\u5236\u3001\u653E\u8361\u4E0E\u201C\u6D88\u6781\u201D\u7684\u8FB9\u7F18\uFF0C"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1060
+    options: 
+  - ID: 1060
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u4ED6\u7AED\u5C3D\u5168\u529B\u60F3\u8981\u51FA\u540D\uFF0C\u800C\u4E14\u4ED6\u6700\u540E\u7684\u786E\u51FA\u540D\u4E86\u3002"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 1061
+    options: 
+  - ID: 1061
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u597D\u4E86\u5E74\u8F7B\u4EBA\uFF0C\u7B2C\u4E8C\u8F6E\u6BD4\u8D5B\u7ED3\u675F\uFF0C\u53C8\u5230\u4E86\u4E2D\u573A\u4F11\u606F\u7684\u65F6\u5019\uFF0C\u8FD8\u6709\u6700\u540E\u4E00\u8F6E\u6BD4\u8D5B\uFF0C\u597D\u597D\u628A\u63E1\u673A\u4F1A\u3002"
+    role_img: end_Xu
+    role_img_pos: 1
+    bg_img: show_2
+    next_id: 0
+    options: 
+  - ID: 1062
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u6CA1\u60F3\u5230\u8FD9\u4E48\u5FEB\u5C31\u7ED3\u675F\u4E86\u7B2C\u4E8C\u8F6E\uFF0C\u4F60\u56DE\u5230\u4E86\u81EA\u5DF1\u7684\u5DE5\u4F5C\u5BA4\uFF0C\u6BD4\u8D5B\u5DF2\u7ECF\u8FDB\u884C\u5230\u4E00\u534A\uFF1F\u4F60\u662F\u4E0D\u662F\u79BB\u6210\u529F\u7684\u827A\u672F\u5BB6\u53C8\u8FD1\u4E86\u4E00\u6B65\uFF1F"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 0
+    options: 
+  - ID: 1063
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u8FD9\u65F6\u5019\u4F60\u7684\u624B\u673A\u54CD\u4E86\u8D77\u6765\uFF0C\u539F\u6765\u4E4B\u524D\u5728\u8C46\u74E3\u4E0A\u627E\u4F60\u642D\u8BDD\u7684\u540E\u8F88\u4E5F\u6765\u53C2\u52A0\u4E86\u8FD9\u4E2A\u9009\u79C0\uFF0C\u4E4B\u524D\u7EBF\u4E0A\u4EA4\u8C08\u4F60\u4EEC\u53D1\u73B0\u4E86\u5F7C\u6B64\u4E4B\u95F4\u7684\u8BB8\u591A\u5171\u540C\u70B9\uFF0C\u73B0\u5728\u66F4\u6210\u4E3A\u4E86\u597D\u670B\u53CB"
+    role_img: douban_junior
+    role_img_pos: 2
+    bg_img: douban
+    next_id: 1064
+    options: 
+  - ID: 1064
+    name: "\u65C1\u8FB9"
+    dialog_content: "ta\u4EBA\u7F18\u6781\u597D\uFF0C\u6B63\u503C\u610F\u6C14\u98CE\u53D1\uFF0C\u5BF9\u827A\u672F\u5145\u6EE1\u70ED\u60C5\uFF0C\u8BA9\u4F60\u60F3\u8D77\u6700\u5F00\u59CB\u63A5\u89E6\u5F53\u4EE3\u827A\u672F\u7684\u65F6\u5019\u3002"
+    role_img: douban_junior
+    role_img_pos: 2
+    bg_img: douban
+    next_id: 1065
+    options: 
+  - ID: 1065
+    name: 
+    dialog_content: "\u8FD9\u6837\u4E00\u4E2A\u8000\u773C\u7684\u5E74\u8F7B\u4EBA\uFF0C\u63D0\u51FA\u8981\u548C\u4F60\u4EA4\u5F80\uFF0C\u4F60\u51B3\u5B9A\uFF1A"
+    role_img: douban_junior
+    role_img_pos: 2
+    bg_img: douban
+    next_id: 0
+    options: 25|26
+  - ID: 1066
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u4F60\u95F2\u6765\u65E0\u4E8B\u5237\u5237\u5FAE\u535A\uFF0C\u4E0A\u9762\u7ADF\u7136\u51FA\u73B0\u8D1F\u9762\u70ED\u641C"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: weibo
+    next_id: 1067
+    options: 
+  - ID: 1067
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u9009\u79C0\u8FDB\u5C55\u5230\u4E2D\u671F\uFF0C\u8282\u76EE\u8FCE\u6765\u4E86\u7F51\u7EDC\u4E0A\u5BF9\u827A\u672F\u9886\u57DF\u7684\u7A7A\u524D\u8BA8\u8BBA"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: weibo
+    next_id: 1068
+    options: 
+  - ID: 1068
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u610F\u60F3\u4E0D\u5230\u7684\u662F\uFF0C\u4F60\u8FD9\u4E2A\u9ED8\u9ED8\u65E0\u95FB\u4E8624\u5E74\u7684\u827A\u672F\u751F\uFF0C"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: weibo
+    next_id: 1069
+    options: 
+  - ID: 1069
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u7ADF\u7136\u56E0\u4E3A\u201C**\u827A\u672F\u5BB6\u6536\u4E70\u516C\u4F17\u53F7\u538B\u4E0B\u4E16\u7EAA\u6284\u88AD\uFF0F**\u827A\u672F\u5BB6\u8BA4\u4E3A\u7F51\u7EA2\u4E0B\u8D31\uFF0F**\u827A\u672F\u5BB6PUA\u524D\u5973\u53CB\u81F4\u5176\u81EA\u6740\u201D\u4E0A\u4E86\u5FAE\u535A\u70ED\u641C\uFF01"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: weibo
+    next_id: 1070
+    options: 
+  - ID: 1070
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u529F\u6210\u540D\u5C31\u5728\u6B64\u4E00\u4E3E\u7684\u5F53\u4E0B\uFF0C\u4F60\u4F1A\u600E\u4E48\u5904\u7406\uFF1F"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: weibo
+    next_id: 0
+    options: 27|28|29
+  - ID: 1071
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u51FA\u540D\u4F3C\u4E4E\u4E5F\u4E0D\u662F\u60F3\u8C61\u4E2D\u7684\u90A3\u79CD\u611F\u89C9\uFF0C\u8FD8\u6CA6\u843D\u4E3A\u952E\u76D8\u4FA0\u653B\u51FB\u7684\u5BF9\u8C61\uFF0C\u4F60\u53EF\u662F\u771F\u6B63\u7684\u827A\u672F\u5BB6\uFF0C\u5E76\u4E0D\u9700\u8981\u5C06\u8FD9\u4E9B\u95F2\u6742\u4EBA\u7B49\u653E\u5728\u773C\u91CC\uFF0C\u4ED6\u4EEC\u4E0D\u61C2\u827A\u672F\uFF01\u4F60\u6124\u6124\u7684\u60F3"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 0
+    options: 
+  - ID: 1072
+    name: "\u65C1\u8FB9"
+    dialog_content: "\u4F60\u7684\u5FC3\u60C5\u6709\u70B9\u4F4E\u843D\uFF0C\u8FD9\u4E2A\u65F6\u5019\uFF0C\u5FFD\u7136\u6709\u4EBA\u7ED9\u4F60\u6253\u7535\u8BDD\uFF0C\u4F60\u63A5\u8D77\u6765\uFF0C\u7ADF\u7136\u662F\u2026\u2026"
+    role_img: leading_actor
+    role_img_pos: 3
+    bg_img: studio
+    next_id: 1073
+    options: 
+  - ID: 1073
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u563F\uFF0C\u5E74\u8F7B\u4EBA\uFF0C\u660E\u5929\u5C31\u662F\u51B3\u8D5B\u4E86\uFF0C\u662F\u4E0D\u662F\u8FD8\u5728\u7D27\u5F20\u7684\u51C6\u5907\u51B3\u8D5B\u4F5C\u54C1\u7684\u53D1\u8868\uFF1F"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: studio
+    next_id: 1074
+    options: 
+  - ID: 1074
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u73B0\u5728\u5DF2\u7ECF\u662F\u6DF1\u591C\u4E86\uFF0C\u4ECA\u665A\u5C31\u522B\u5728\u5DE5\u4F5C\u5BA4\u7761\u4E86\u5427\uFF0C\u6765\u6211\u7684\u623F\u95F4\uFF0C\u6211\u7ED9\u4F60\u6307\u70B9\u4E00\u4E8C\uFF0C\u673A\u4E0D\u53EF\u5931\uFF0C\u5931\u4E0D\u518D\u6765\uFF0C\u6211\u6D17\u5E72\u51C0\u7B49\u4F60\u54DF\u3002"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: studio
+    next_id: 1075
+    options: 
+  - ID: 1075
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u9762\u5BF9\u5BFC\u5E08\u7684\u8BF1\u60D1\uFF0C\u4F60\u51B3\u5B9A\uFF1A"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: studio
+    next_id: 0
+    options: 30|31
+  - ID: 1076
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u827A\u672F\u6E90\u4E8E\u521B\u9020\uFF0C\u800C\u521B\u9020\u7684\u57FA\u7840\u9996\u5148\u662F\u6A21\u4EFF"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_3
+    next_id: 1077
+    options: 
+  - ID: 1077
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u5728\u51B3\u8D5B\u91CC\uFF0C\u4F60\u5C06\u6709\u673A\u4F1A\u4E34\u6479\u5F53\u4EE3\u827A\u672F\u5E02\u573A\u5356\u5F97\u6700\u8D35\u7684\u9876\u6D41\u827A\u672F\u5BB6\u7684\u753B\u4F5C\uFF0C\u5B66\u5B66\u522B\u4EBA\u6210\u529F\u7684\u7ECF\u9A8C\u5427\uFF0C\u753B\u597D\u4E86\u4F60\u4E5F\u6210\u529F\u4E86\u4E00\u534A"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_3
+    next_id: 1078
+    options: 
+  - ID: 1078
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "\u671F\u5F85\u5DF2\u4E45\u7684\u51B3\u8D5B\u9A6C\u4E0A\u5F00\u59CB\uFF01"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_3
+    next_id: 1079
+    options: 
+  - ID: 1079
+    name: "\u5F90\u5BFC\u5E08"
+    dialog_content: "Let\u2019s \u753B\u753B\uFF01This is so contemporary!"
+    role_img: end_Xu
+    role_img_pos: 2
+    bg_img: show_3
+    next_id: 0
+    options: 
+  - ID: 1080
+    name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
+    dialog_content: "\u4E09\u4E2A\u6708\u7684\u6BD4\u8D5B\u8FC7\u53BB\u4E86\uFF0C\u4F60\u6CA1\u80FD\u8D62\u5F97\u6BD4\u8D5B\uFF0C\u9519\u5931\u4E86\u6210\u4E3A\u4F17\u6240\u77A9\u76EE\u7684\u827A\u672F\u5BB6\u7684\u673A\u4F1A\u3002\u4E34\u8D70\u524D\uFF0C\u5BFC\u5E08\u6709\u4E9B\u8BDD\u60F3\u8DDF\u4F60\u8BF4\u2026\u2026"
+    role_img: leading_actor
+    role_img_pos: 2
+    bg_img: show_3
+    next_id: 1081
+    options: 
+  - ID: 1081
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u8BF6\uFF0C\u6211\u4EEC\u4E5F\u505A\u5E08\u751F\u76F8\u5904\u4E86\u8FD9\u4E48\u591A\u4E2A\u6708\u4E86\uFF0C\u8DDF\u4F60\u8BF4\u8BF4\u5FC3\u91CC\u8BDD"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1011
-  - ID: 1011
+    bg_img: show_3
+    next_id: 1082
+    options: 
+  - ID: 1082
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u5176\u5B9E\u4F60\u5728\u827A\u672F\u4E0A\u7684\u8D44\u8D28\u633A\u5E73\u5EB8\u7684\uFF0C\u800C\u4E14\u4E5F\u6CA1\u6709\u4EC0\u4E48\u793E\u4EA4\u6280\u5DE7\u3002\u867D\u7136\u4F60\u8FD8\u7B97\u5BCC\u88D5\uFF0C\u4F46\u5149\u6709\u94B1\u662F\u505A\u4E0D\u4E86\u827A\u672F\u7684"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1012
-  - ID: 1012
+    bg_img: show_3
+    next_id: 1083
+    options: 
+  - ID: 1083
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u8D76\u7D27\u60F3\u60F3\u81EA\u5DF1\u7684\u51FA\u8DEF\u5427\uFF0C\u8981\u6210\u4E3A\u77E5\u540D\u800C\u6210\u529F\u7684\u827A\u672F\u5BB6\u4E0D\u662F\u90A3\u4E48\u5BB9\u6613\u7684"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1013
-  - ID: 1013
+    bg_img: show_3
+    next_id: 1084
+    options: 
+  - ID: 1084
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u591A\u5C11\u4EBA\u521A\u8D70\u5165\u827A\u672F\u65F6\uFF0C\u6000\u63E3\u7740\u8FDB\u5165\u827A\u672F\u53F2\u7684\u91CE\u5FC3\u548C\u68A6\u60F3\uFF0C\u7ED3\u679C\u88AB\u6B8B\u9177\u7684\u73B0\u5B9E\u6D88\u78E8\u4E86\u68F1\u89D2"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1014
-  - ID: 1014
+    bg_img: show_3
+    next_id: 1085
+    options: 
+  - ID: 1085
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u6BD4\u8D77\u4E00\u65E0\u6240\u6709\u7684\u4ED6\u4EEC\uFF0C\u53CD\u6B63\u4F60\u8FD8\u6709\u70B9\u94B1\uFF0C\u4E0D\u5982\u6362\u4E2A\u884C\u5F53\u505A\u505A\u751F\u610F\u5427\uFF0C\u827A\u672F\u7684\u8BDD\uFF0C\u4EE5\u540E\u6709\u7F18\u518D\u89C1"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
+    bg_img: show_3
     next_id: 0
-  - ID: 1015
+    options: 
+  - ID: 1086
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u4E09\u4E2A\u6708\u7684\u6BD4\u8D5B\u843D\u4E0B\u5E37\u5E55\uFF0C\u4F60\u8D62\u5F97\u4E86\u6BD4\u8D5B\u7B2C\u4E00\u3002\u7B2C\u4E00\uFF1F\u7B2C\u4E00\uFF01\u4F60\u7B2C\u4E00\u6B21\u6210\u4E3A\u4E86\u90A3\u4E2A\u4F17\u6240\u77A9\u76EE\u7684\u5BF9\u8C61\uFF01\u6240\u6709\u7684\u5A92\u4F53\u6392\u7740\u961F\u8981\u62A5\u9053\u4F60\u3002\u4E34\u8D70\u524D\uFF0C\u5BFC\u5E08\u6709\u4E9B\u8BDD\u60F3\u8DDF\u4F60\u8BF4\u2026\u2026"
-    role_img: end_Xu
+    role_img: leading_actor
     role_img_pos: 2
-    bg_img: 
-    next_id: 1016
-  - ID: 1016
+    bg_img: show_3
+    next_id: 1087
+    options: 
+  - ID: 1087
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u53D7\u4EBA\u77A9\u76EE\u7684\u611F\u89C9\u600E\u4E48\u6837\uFF1F\u5F53\u6211\u7B2C\u4E00\u6B21\u770B\u5230\u4F60\uFF0C\u6211\u5C31\u89C9\u5F97\uFF0C\u8FD9\u4E2A\u5E74\u8F7B\u4EBA\u7EC8\u6709\u4E00\u5929\u4F1A\u53D1\u5149\u7684\u3002\u6211\u5728\u4F60\u8EAB\u4E0A\u770B\u5230\u4E86\u6211\u81EA\u5DF1"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1017
-  - ID: 1017
+    bg_img: show_3
+    next_id: 1088
+    options: 
+  - ID: 1088
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u6DF7\u8FF9\u827A\u672F\u754C\u4E2D\uFF0C\u6709\u65F6\u624D\u534E\u5E76\u4E0D\u662F\u6700\u91CD\u8981\u7684\u3002\u5982\u4ECA\u4F60\u5728\u8282\u76EE\u4E2D\u8D62\u5F97\u4E86\u8D44\u91D1\u4E5F\u79EF\u7D2F\u4E86\u4EBA\u8109\uFF0C\u5C31\u610F\u5473\u7740\u4F60\u62E5\u6709\u4E86\u4E00\u5B9A\u7684\u8BDD\u8BED\u6743\u3002\u6765\uFF0C\u62FF\u4E0A\u6211\u8FD9\u672C\u300A\u8001\u70AE\u8BDD\u672F\u300B"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1018
-  - ID: 1018
+    bg_img: show_3
+    next_id: 1089
+    options: 
+  - ID: 1089
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u8BB0\u4F4F\uFF0C\u7B11\u5BF9\u4E00\u5207\u8D28\u7591\uFF0C\u6C38\u8FDC\u76F8\u4FE1\u81EA\u5DF1\u7684\u4F5C\u54C1\u662F\u6700\u725B\u903C\u7684\uFF0C\u4E45\u800C\u4E45\u4E4B\uFF0C\u4F60\u5C31\u4F1A\u6210\u4E3A\u522B\u4EBA\u53E3\u4E2D\u7684\u201C\u5927\u827A\u672F\u5BB6\u201D"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1019
-  - ID: 1019
+    bg_img: show_3
+    next_id: 1090
+    options: 
+  - ID: 1090
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u563F\u563F\u563F\uFF0C\u6B22\u8FCE\u5F00\u542F\u5708\u94B1\u7684\u5927\u95E8\uFF0C\u827A\u672F\u7684\u9053\u8DEF\u4E0A\u6211\u4EEC\u4E0D\u89C1\u4E0D\u6563"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
+    bg_img: show_3
     next_id: 0
-  - ID: 1020
+    options: 
+  - ID: 1091
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u4E09\u4E2A\u6708\u7684\u6BD4\u8D5B\u6709\u75DB\u82E6\u4E5F\u6709\u6536\u83B7\uFF0C\u4F60\u867D\u7136\u4E0D\u662F\u7B2C\u4E00\u540D\uFF0C\u4F46\u4E5F\u6324\u5165\u4E86\u6392\u540D\u524D\u5217\uFF0C\u6536\u83B7\u4E86\u4E00\u4E9B\u5927\u4F17\u597D\u611F\u3002\u4F60\u575A\u6301\u4E86\u81EA\u5DF1\u5BF9\u827A\u672F\u7684\u8981\u6C42\uFF0C\u7EF4\u62A4\u4E86\u81EA\u5DF1\u7684\u64CD\u5B88\u3002\u4E34\u8D70\u524D\uFF0C\u4F60\u7684\u5BFC\u5E08\u6709\u4E9B\u8BDD\u60F3\u5BF9\u4F60\u8BF4\u2026\u2026"
-    role_img: end_Xu
+    role_img: leading_actor
     role_img_pos: 2
-    bg_img: 
-    next_id: 1021
-  - ID: 1021
+    bg_img: show_3
+    next_id: 1092
+    options: 
+  - ID: 1092
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u5E74\u8F7B\u4EBA\uFF0C\u4F60\u7684\u7EAF\u7CB9\u548C\u575A\u6301\uFF0C\u4E00\u5B9A\u4F1A\u5E2E\u52A9\u4F60\u6210\u4E3A\u4E00\u4E2A\u7279\u522B\u7684\u827A\u672F\u5BB6"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1022
-  - ID: 1022
+    bg_img: show_3
+    next_id: 1093
+    options: 
+  - ID: 1093
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u6216\u8BB8\u73B0\u5728\u4F60\u8FD8\u6CA1\u6709\u8D44\u91D1\u8BA9\u81EA\u5DF1\u7684\u751F\u6D3B\u548C\u521B\u4F5C\u73AF\u5883\u597D\u4E00\u70B9\u3002\u4F46\u4F60\u8981\u76F8\u4FE1\u4E00\u70B9\uFF0C\u4F60\u7684\u827A\u672F\u6216\u8BB8\u53EF\u4EE5\u5F71\u54CD\u8BB8\u591A\u4EBA\uFF0C\u751A\u81F3\u6539\u53D8\u8FD9\u4E2A\u4E16\u754C\u3002\u6211\u4EEC\u52A0\u4E2A\u5FAE\u4FE1\u5427\uFF0C\u4EE5\u540E\u6709\u4EC0\u4E48\u56F0\u60D1\u90FD\u53EF\u4EE5\u548C\u6211\u804A"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1023
-  - ID: 1023
+    bg_img: show_3
+    next_id: 1094
+    options: 
+  - ID: 1094
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u6211\u66FE\u7ECF\u6709\u673A\u4F1A\u6210\u4E3A\u4F60\u8FD9\u6837\u7684\u827A\u672F\u5BB6\uFF0C\u4F46\u6211\u4E0D\u613F\u4E0E\u8D2B\u4E4F\u7684\u65E5\u5B50\u76F8\u4F34\u3002\u795D\u4F60\u597D\u8FD0\uFF01\u5E74\u8F7B\u4EBA\u3002"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
+    bg_img: show_3
     next_id: 0
-  - ID: 1024
+    options: 
+  - ID: 1095
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u4E09\u4E2A\u6708\u7684\u6BD4\u8D5B\u7ED3\u675F\uFF0C\u4F60\u52C9\u5F3A\u6324\u8FDB\u51B3\u8D5B\uFF0C\u6DF7\u4E86\u4E2A\u8138\u719F\u3002\u4F46\u662F\u901A\u8FC7\u6BD4\u8D5B\u4F60\u6536\u5272\u4E86\u4E00\u5927\u6279\u7C89\u4E1D\uFF0C\u6210\u4E3A\u4E86\u827A\u672F\u754C\u6D41\u91CF\u660E\u661F\u3002\u4E34\u8D70\u524D\uFF0C\u4F60\u7684\u5BFC\u5E08\u6709\u4E9B\u8BDD\u60F3\u8DDF\u4F60\u8BF4\u2026\u2026"
-    role_img: end_Xu
+    role_img: leading_actor
     role_img_pos: 2
-    bg_img: 
-    next_id: 1025
-  - ID: 1025
+    bg_img: show_3
+    next_id: 1096
+    options: 
+  - ID: 1096
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u54DF\uFF0C\u5E74\u8F7B\u4EBA\uFF0C\u8FD9\u662F\u4E2A\u6D41\u91CF\u4E3A\u738B\u7684\u65F6\u4EE3\uFF0C\u4F60\u7D27\u7D27\u7684\u6293\u4F4F\u4E86\u65F6\u4EE3\u7684\u8109\u640F\uFF0C\u73B0\u5728\u4F60\u4E5F\u662F\u6296\u97F3\u4E09\u767E\u4E07\u7C89\u7684\u5927\u4E3B\u64AD\u4E86"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1026
-  - ID: 1026
+    bg_img: show_3
+    next_id: 1097
+    options: 
+  - ID: 1097
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u8FD9\u6216\u8BB8\u662F\u4E2A\u4E0D\u9519\u7684\u673A\u9047\uFF01\u7528\u4F60\u7684\u7C89\u4E1D\u5F71\u54CD\u529B\uFF0C\u7ED9\u5927\u4F17\u79D1\u666E\u827A\u672F\u3002\u4E09\u5206\u77E5\u8BC6\uFF0C\u4E03\u5206\u76AE\u56CA\uFF0C\u6708\u5165\u767E\u4E07\u3002"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1027
-  - ID: 1027
+    bg_img: show_3
+    next_id: 1098
+    options: 
+  - ID: 1098
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u4E0B\u4E2A\u6708\u6211\u7684\u65B0\u5C55\u5F00\u5E55\uFF0C\u4F60\u8DDF\u7F51\u7EA2\u670B\u53CB\u4EEC\u8FC7\u6765\u81EA\u62CD\u6253\u5361\u5427\uFF0C\u5728\u7EA2\u5C0F\u4E66\u4E0A\u5E2E\u6211\u63A8\u4E00\u628A"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1028
-  - ID: 1028
+    bg_img: show_3
+    next_id: 1099
+    options: 
+  - ID: 1099
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u6807\u9898\u90FD\u5E2E\u4F60\u60F3\u597D\u4E86\uFF0C\u5C31\u53EB\u300A\u5728XX\u7684\u5C55\u89C8\u4E0A\uFF0C\u600E\u4E48\u5229\u7528\u955C\u5B50\u548C\u5149\u7EBF\u81EA\u62CD\u300B\u3001\u300A\u9B54\u90FD\u6700\u597D\u81EA\u62CD\u7684\u5C55\u89C8\u4E00\u5B9A\u662FXX\u300B"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
-    next_id: 1029
-  - ID: 1029
+    bg_img: show_3
+    next_id: 1100
+    options: 
+  - ID: 1100
     name: "\u5BFC\u5E08\u6709\u8BDD\u8BB2"
     dialog_content: "\u5408\u4F5C\u6109\u5FEB\uFF0C\u5E74\u8F7B\u4EBA\uFF0C\u563F\u563F\u563F"
     role_img: end_Xu
     role_img_pos: 2
-    bg_img: 
+    bg_img: show_3
     next_id: 0
+    options: 

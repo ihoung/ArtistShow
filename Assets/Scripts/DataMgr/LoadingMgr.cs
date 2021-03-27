@@ -45,7 +45,20 @@ public class LoadingMgr : MonoSingleTon<LoadingMgr>
         }
         asycOp.allowSceneActivation = true;
         yield return new WaitForEndOfFrame();
-        GameRoot.Instance.EnterGame();
+        OnLoadCompleted();
         yield break;
+    }
+
+    private void OnLoadCompleted()
+    {
+        switch (m_curScene)
+        {
+            case "Main":
+                GameRoot.Instance.EnterGame();
+                break;
+            case "Start":
+                UIMgr.Instance.InitNewScene(EScene.Start);
+                break;
+        }
     }
 }

@@ -176,7 +176,8 @@ public class ImportExcel : EditorWindow
                                 }
                                 else if (fieldType == null)
                                 {
-                                    item.Add(field.Key, "");
+                                    if (field.Key == "ID")
+                                        break;
                                 }
                                 else
                                 {

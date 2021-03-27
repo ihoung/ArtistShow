@@ -7,6 +7,7 @@ public class SOTableItemAnswer : SOTableItem
 {
     public string option;
     public int feedback;
+    public int dialog;
 }
 
 [System.Serializable]

@@ -54,6 +54,9 @@ public abstract class BasicWnd<TWndMono> where TWndMono : BasicWndMono
 
         goWnd.SetActive(true);
         IsShow = true;
+
+        goWnd.transform.SetAsLastSibling();
+
         OnShow();
     }
 

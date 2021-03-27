@@ -32,7 +32,7 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
         }
 
         Mono.btnCommit.onClick.AddListener(CommitPainting);
-        Mono.btnClose.onClick.AddListener(Destroy);
+        Mono.btnClose.onClick.AddListener(FinishCurMatch);
     }
 
     protected override void OnShow()
@@ -91,20 +91,22 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
         m_curPaintColors[pieceUnit.PieceIndex] = m_curPainting.SelectedColor;
     }
 
+    private float m_score;
+
     private void CommitPainting()
     {
+        Mono.btnCommit.gameObject.SetActive(false);
+        Mono.btnClose.gameObject.SetActive(true);
+
         m_curPainting.SetAllPieceBtnEnable(false);
         Mono.paitingArea.DOAnchorPos(Mono.comparingArea.anchoredPosition, 1f);
 
         m_standardPainting = new PaintingPanel(paintingNamePrefix + m_curMatchID.ToString(), Mono.originalPainting.transform);
         m_standardPainting.SetStandardActive(true);
 
-        float score = CaculateScore();
+        float m_score = CaculateScore();
         Mono.goFinalScore.SetActive(true);
-        Mono.txtScore.SetText(score.ToString("f2") + "/10.0");
-
-        Mono.btnCommit.gameObject.SetActive(false);
-        Mono.btnClose.gameObject.SetActive(true);
+        Mono.txtScore.SetText(m_score.ToString("f2") + "/10.0");
     }
 
     private float CaculateScore()
@@ -121,5 +123,21 @@ public class PaintingMatchWnd : BaseSingleTonWnd<PaintingMatchWnd, PaintingMatch
         }
 
         return (1 - sum / count) * 10f;
+    }
+
+    private void FinishCurMatch()
+    {
+        TableItemFeedback res;
+        if (m_score < 0.3)
+            res = TableMgr.Instance.TableFeedback.GetItem(35);
+        else if (m_score < 0.6)
+            res = TableMgr.Instance.TableFeedback.GetItem(36);
+        else
+            res = TableMgr.Instance.TableFeedback.GetItem(36);
+
+        PlayerDataMgr.Instance.CurPlayerData.BasicInfo.DoFeedBack(res);
+        ConfirmWnd.Instance.ShowWnd(PlayerBasicInfo.GetInfoStr(res), TableMgr.GetUIString("Confirm"));
+
+        Destroy();
     }
 }

@@ -33,12 +33,16 @@ public class StartGameWnd : BaseSingleTonWnd<StartGameWnd, StartGameWndMono>
 
     private void ContinueGame()
     {
+        Hide();
+
         GameRoot.Instance.SetLoadingMode(ELoadingMode.Continue);
         LoadingMgr.Instance.SwitchScene(EScene.Main);
     }
 
     private void StartNewGame()
     {
+        Hide();
+
         GameRoot.Instance.SetLoadingMode(ELoadingMode.NewGame);
         LoadingMgr.Instance.SwitchScene(EScene.Main);
     }
