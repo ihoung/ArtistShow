@@ -309,7 +309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c70ab0ec77afd4287b36a755b76df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentScene: 2
+  CurrentScene: 3
+  Bottom: {fileID: 1906465247}
+  Middle: {fileID: 799919778}
+  Top: {fileID: 822705349}
+  OverAll: {fileID: 1379155333}
 --- !u!1 &799919777
 GameObject:
   m_ObjectHideFlags: 0

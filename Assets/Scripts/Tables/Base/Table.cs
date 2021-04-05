@@ -20,7 +20,7 @@ public class Table<TTableItem, TSOTable, TSOTableItem> where TTableItem : TableI
 {
     public string ResName { get; }
 
-    private Dictionary<int, TTableItem> m_dictTable = new Dictionary<int, TTableItem>();
+    private readonly Dictionary<int, TTableItem> m_dictTable = new Dictionary<int, TTableItem>();
 
     public Table(TSOTable so)
     {
@@ -49,6 +49,16 @@ public class Table<TTableItem, TSOTable, TSOTableItem> where TTableItem : TableI
                 ret.Add(p.Value);
         }
         return ret;
+    }
+
+    public TTableItem GetFirstItem(Func<TTableItem, bool> conditionFunc)
+    {
+        foreach (var item in m_dictTable.Values)
+        {
+            if (conditionFunc(item))
+                return item;
+        }
+        return null;
     }
 
     public List<TTableItem> GetAllItems()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum EUILayer
 {
+    Base,
     Bottom,
     Middle,
     Top,
@@ -27,7 +28,7 @@ public abstract class BaseWnd<TWndMono> where TWndMono : BaseWndMono
 
     private void Init()
     {
-        goWnd = Object.Instantiate(ResUtil.LoadPrefab(ResName), MainUILayerMgr.Instance.UILayer[Layer]);
+        goWnd = Object.Instantiate(ResUtil.LoadPrefab(ResName), UIMgr.Instance.UILayer[Layer]);
 
         RectTransform rectTrans = goWnd.GetComponent<RectTransform>();
         rectTrans.anchorMin = new Vector2(0f, 0f);
